@@ -197,7 +197,7 @@
                                 <buttonConfiguration key="configuration" style="filled" title="Ingresar"/>
                                 <connections>
                                     <action selector="ingresarButton:" destination="9Fu-RS-dWp" eventType="touchUpInside" id="y7V-Xh-Ct1"/>
-                                    <segue destination="PWj-P1-LKy" kind="show" id="GdH-UE-ciY"/>
+                                    <segue destination="PWj-P1-LKy" kind="presentation" modalPresentationStyle="fullScreen" id="GdH-UE-ciY"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -551,10 +551,10 @@
             </objects>
             <point key="canvasLocation" x="3156.4885496183206" y="-27.464788732394368"/>
         </scene>
-        <!--Admin Menu View Controller-->
+        <!--Admin View Controller-->
         <scene sceneID="bq4-EO-I2c">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="PWj-P1-LKy" customClass="AdminMenuViewController" customModule="HuacaBrava" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="PWj-P1-LKy" customClass="AdminViewController" customModule="HuacaBrava" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="yxz-cB-NFM"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="5j1-P0-odI">
@@ -576,7 +576,7 @@
                     <tabBarItem key="tabBarItem" title="Platos" image="fork.knife.circle.fill" catalog="system" id="AwN-tD-ZlC"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="WBK-Py-2fy">
-                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
