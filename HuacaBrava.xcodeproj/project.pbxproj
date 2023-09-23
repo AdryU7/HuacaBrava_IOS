@@ -15,6 +15,8 @@
 		B7350C952AB773E100C33F7D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7350C932AB773E100C33F7D /* Main.storyboard */; };
 		B7350C972AB773E200C33F7D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7350C962AB773E200C33F7D /* Assets.xcassets */; };
 		B7350C9A2AB773E200C33F7D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7350C982AB773E200C33F7D /* LaunchScreen.storyboard */; };
+		B77A6BF92ABF46FA009D55B6 /* AdminLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77A6BF82ABF46FA009D55B6 /* AdminLoginViewController.swift */; };
+		B77A6BFB2ABF48FB009D55B6 /* AdminMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77A6BFA2ABF48FB009D55B6 /* AdminMenuViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		B7350C962AB773E200C33F7D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B7350C992AB773E200C33F7D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B7350C9B2AB773E200C33F7D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B77A6BF82ABF46FA009D55B6 /* AdminLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminLoginViewController.swift; sourceTree = "<group>"; };
+		B77A6BFA2ABF48FB009D55B6 /* AdminMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminMenuViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +73,8 @@
 				B7350C9B2AB773E200C33F7D /* Info.plist */,
 				B70D145C2ABB5FA5001F4014 /* LoginViewController.swift */,
 				B70D145E2ABB663D001F4014 /* MenuViewController.swift */,
+				B77A6BF82ABF46FA009D55B6 /* AdminLoginViewController.swift */,
+				B77A6BFA2ABF48FB009D55B6 /* AdminMenuViewController.swift */,
 			);
 			path = HuacaBrava;
 			sourceTree = "<group>";
@@ -144,7 +150,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B77A6BF92ABF46FA009D55B6 /* AdminLoginViewController.swift in Sources */,
 				B70D145D2ABB5FA5001F4014 /* LoginViewController.swift in Sources */,
+				B77A6BFB2ABF48FB009D55B6 /* AdminMenuViewController.swift in Sources */,
 				B70D145F2ABB663D001F4014 /* MenuViewController.swift in Sources */,
 				B7350C922AB773E100C33F7D /* ViewController.swift in Sources */,
 				B7350C8E2AB773E100C33F7D /* AppDelegate.swift in Sources */,

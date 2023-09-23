@@ -19,22 +19,22 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func inicioSesionButton(_ sender: Any) {
-        var correo = emailTextField.text
-        var clave = passwordTextField.text
+        let correo = emailTextField.text
+        let clave = passwordTextField.text
         if let email = correo, let pass = clave{
             if email.isEmpty{
                 showAlert(mensaje: "Ingrese correo")
             } else if pass.isEmpty{
                 showAlert(mensaje: "Ingrese clave")
             }else{
-                goToMeu()
+                goToMenu()
             }
         }else{
             showAlert(mensaje: "NADA")
         }
     }
     
-    func goToMeu(){
+    func goToMenu(){
         let storyBoard:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let viewScreen = storyBoard.instantiateViewController(withIdentifier: "TabBarMenu") as!
         MenuViewController
@@ -42,7 +42,7 @@ class LoginViewController: UIViewController {
         self.present(viewScreen, animated: true, completion: nil)
     }
     func showAlert(mensaje : String){
-        let alert = UIAlertController(title: "ERROR", message: mensaje, preferredStyle: .alert)
+        let alert = UIAlertController(title: "Error", message: mensaje, preferredStyle: .alert)
         let button = UIAlertAction(title: "Entendido", style:.default)
         alert.addAction(button)
         self.present(alert, animated: true)
