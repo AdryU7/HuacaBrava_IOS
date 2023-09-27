@@ -15,6 +15,12 @@
 		B7350C952AB773E100C33F7D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7350C932AB773E100C33F7D /* Main.storyboard */; };
 		B7350C972AB773E200C33F7D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7350C962AB773E200C33F7D /* Assets.xcassets */; };
 		B7350C9A2AB773E200C33F7D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7350C982AB773E200C33F7D /* LaunchScreen.storyboard */; };
+		B7446D952AC491B9001D80B3 /* AdminPlatoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7446D942AC491B9001D80B3 /* AdminPlatoTableViewCell.swift */; };
+		B7446D972AC492A0001D80B3 /* AdminPlatoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7446D962AC492A0001D80B3 /* AdminPlatoViewController.swift */; };
+		B7446D992AC49344001D80B3 /* AdminPlato.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7446D982AC49344001D80B3 /* AdminPlato.swift */; };
+		B7446D9D2AC4A385001D80B3 /* AdminEmpleadoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7446D9C2AC4A385001D80B3 /* AdminEmpleadoTableViewCell.swift */; };
+		B7446D9F2AC4A565001D80B3 /* AdminEmpleado.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7446D9E2AC4A565001D80B3 /* AdminEmpleado.swift */; };
+		B7446DA12AC4A5DE001D80B3 /* AdminEmpleadoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7446DA02AC4A5DE001D80B3 /* AdminEmpleadoViewController.swift */; };
 		B77A6BF92ABF46FA009D55B6 /* AdminLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77A6BF82ABF46FA009D55B6 /* AdminLoginViewController.swift */; };
 		B77A6BFD2ABF4C32009D55B6 /* AdminViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77A6BFC2ABF4C32009D55B6 /* AdminViewController.swift */; };
 /* End PBXBuildFile section */
@@ -30,6 +36,12 @@
 		B7350C962AB773E200C33F7D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B7350C992AB773E200C33F7D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B7350C9B2AB773E200C33F7D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B7446D942AC491B9001D80B3 /* AdminPlatoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminPlatoTableViewCell.swift; sourceTree = "<group>"; };
+		B7446D962AC492A0001D80B3 /* AdminPlatoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminPlatoViewController.swift; sourceTree = "<group>"; };
+		B7446D982AC49344001D80B3 /* AdminPlato.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminPlato.swift; sourceTree = "<group>"; };
+		B7446D9C2AC4A385001D80B3 /* AdminEmpleadoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminEmpleadoTableViewCell.swift; sourceTree = "<group>"; };
+		B7446D9E2AC4A565001D80B3 /* AdminEmpleado.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminEmpleado.swift; sourceTree = "<group>"; };
+		B7446DA02AC4A5DE001D80B3 /* AdminEmpleadoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminEmpleadoViewController.swift; sourceTree = "<group>"; };
 		B77A6BF82ABF46FA009D55B6 /* AdminLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminLoginViewController.swift; sourceTree = "<group>"; };
 		B77A6BFC2ABF4C32009D55B6 /* AdminViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -64,6 +76,7 @@
 		B7350C8C2AB773E100C33F7D /* HuacaBrava */ = {
 			isa = PBXGroup;
 			children = (
+				B7446D922AC49178001D80B3 /* admin */,
 				B7350C8D2AB773E100C33F7D /* AppDelegate.swift */,
 				B7350C8F2AB773E100C33F7D /* SceneDelegate.swift */,
 				B7350C912AB773E100C33F7D /* ViewController.swift */,
@@ -77,6 +90,35 @@
 				B77A6BFC2ABF4C32009D55B6 /* AdminViewController.swift */,
 			);
 			path = HuacaBrava;
+			sourceTree = "<group>";
+		};
+		B7446D922AC49178001D80B3 /* admin */ = {
+			isa = PBXGroup;
+			children = (
+				B7446D9B2AC49EF3001D80B3 /* empleado */,
+				B7446D932AC49188001D80B3 /* plato */,
+			);
+			path = admin;
+			sourceTree = "<group>";
+		};
+		B7446D932AC49188001D80B3 /* plato */ = {
+			isa = PBXGroup;
+			children = (
+				B7446D942AC491B9001D80B3 /* AdminPlatoTableViewCell.swift */,
+				B7446D962AC492A0001D80B3 /* AdminPlatoViewController.swift */,
+				B7446D982AC49344001D80B3 /* AdminPlato.swift */,
+			);
+			path = plato;
+			sourceTree = "<group>";
+		};
+		B7446D9B2AC49EF3001D80B3 /* empleado */ = {
+			isa = PBXGroup;
+			children = (
+				B7446D9C2AC4A385001D80B3 /* AdminEmpleadoTableViewCell.swift */,
+				B7446D9E2AC4A565001D80B3 /* AdminEmpleado.swift */,
+				B7446DA02AC4A5DE001D80B3 /* AdminEmpleadoViewController.swift */,
+			);
+			path = empleado;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,9 +193,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				B77A6BF92ABF46FA009D55B6 /* AdminLoginViewController.swift in Sources */,
+				B7446DA12AC4A5DE001D80B3 /* AdminEmpleadoViewController.swift in Sources */,
 				B70D145D2ABB5FA5001F4014 /* LoginViewController.swift in Sources */,
+				B7446D9F2AC4A565001D80B3 /* AdminEmpleado.swift in Sources */,
+				B7446D992AC49344001D80B3 /* AdminPlato.swift in Sources */,
 				B70D145F2ABB663D001F4014 /* MenuViewController.swift in Sources */,
+				B7446D972AC492A0001D80B3 /* AdminPlatoViewController.swift in Sources */,
+				B7446D9D2AC4A385001D80B3 /* AdminEmpleadoTableViewCell.swift in Sources */,
 				B77A6BFD2ABF4C32009D55B6 /* AdminViewController.swift in Sources */,
+				B7446D952AC491B9001D80B3 /* AdminPlatoTableViewCell.swift in Sources */,
 				B7350C922AB773E100C33F7D /* ViewController.swift in Sources */,
 				B7350C8E2AB773E100C33F7D /* AppDelegate.swift in Sources */,
 				B7350C902AB773E100C33F7D /* SceneDelegate.swift in Sources */,
