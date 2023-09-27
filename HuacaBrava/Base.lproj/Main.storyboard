@@ -554,10 +554,11 @@
         <!--Admin View Controller-->
         <scene sceneID="bq4-EO-I2c">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="PWj-P1-LKy" customClass="AdminViewController" customModule="HuacaBrava" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="TabBarAdminMenu" automaticallyAdjustsScrollViewInsets="NO" id="PWj-P1-LKy" customClass="AdminViewController" customModule="HuacaBrava" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="yxz-cB-NFM"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="5j1-P0-odI">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>

@@ -39,7 +39,7 @@ class AdminLoginViewController: UIViewController {
     
     func goToAdminMenu() {
         let storyBoard:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let viewScreen2 = storyBoard.instantiateViewController(withIdentifier: "TabBarMenu") as!
+        let viewScreen2 = storyBoard.instantiateViewController(withIdentifier: "TabBarAdminMenu") as!
         AdminViewController
         viewScreen2.modalPresentationStyle = .fullScreen
         self.present(viewScreen2, animated: true, completion: nil)
