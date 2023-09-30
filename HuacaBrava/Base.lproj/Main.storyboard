@@ -386,7 +386,7 @@
             </objects>
             <point key="canvasLocation" x="131" y="715"/>
         </scene>
-        <!--Ubicación-->
+        <!--View Controller-->
         <scene sceneID="QLT-Ts-fMJ">
             <objects>
                 <viewController id="1uW-C4-7eC" sceneMemberID="viewController">
@@ -396,13 +396,15 @@
                         <viewLayoutGuide key="safeArea" id="WG4-C0-AKN"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Ubicación" image="location.circle.fill" catalog="system" id="O3I-Ny-BYD"/>
+                    <navigationItem key="navigationItem" id="ask-yl-nXa">
+                        <barButtonItem key="rightBarButtonItem" title="Carrito" image="cart.fill" catalog="system" id="ale-dW-fwi"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="poS-LP-u6t" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2282" y="715"/>
+            <point key="canvasLocation" x="2282" y="1470"/>
         </scene>
-        <!--A la carta-->
+        <!--View Controller-->
         <scene sceneID="Ezj-Ss-gLl">
             <objects>
                 <viewController id="HNl-22-960" sceneMemberID="viewController">
@@ -412,13 +414,15 @@
                         <viewLayoutGuide key="safeArea" id="6Yq-he-dhS"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="A la carta" image="fork.knife.circle.fill" catalog="system" id="69T-lh-0q6"/>
+                    <navigationItem key="navigationItem" id="uvu-Qc-YAQ">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="cart.fill" catalog="system" id="uKt-Yc-cFI"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3j9-gm-f9F" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3185" y="715"/>
+            <point key="canvasLocation" x="3131" y="1470"/>
         </scene>
-        <!--Créditos-->
+        <!--View Controller-->
         <scene sceneID="7d7-lE-DGE">
             <objects>
                 <viewController id="Ooz-Be-np0" sceneMemberID="viewController">
@@ -428,13 +432,15 @@
                         <viewLayoutGuide key="safeArea" id="KoF-HD-cD6"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Créditos" image="creditcard.circle.fill" catalog="system" id="z0g-B6-WWU"/>
+                    <navigationItem key="navigationItem" id="8DC-Kf-VZg">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="cart.fill" catalog="system" id="xLB-HP-DJz"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EUq-Ox-OSm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4037" y="715"/>
+            <point key="canvasLocation" x="4021" y="1470"/>
         </scene>
-        <!--Opciones-->
+        <!--View Controller-->
         <scene sceneID="Gg0-cx-wpH">
             <objects>
                 <viewController id="NSn-DG-wnx" sceneMemberID="viewController">
@@ -444,11 +450,13 @@
                         <viewLayoutGuide key="safeArea" id="AIV-rX-Bei"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Opciones" image="option" catalog="system" id="auo-oN-ErN"/>
+                    <navigationItem key="navigationItem" id="ZpE-dt-5UL">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="cart.fill" catalog="system" id="Xx3-ts-b0D"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sg3-if-jeL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4753" y="715"/>
+            <point key="canvasLocation" x="4844" y="1470"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="efF-6a-nDt">
@@ -499,10 +507,10 @@
                     </tabBar>
                     <connections>
                         <segue destination="RtX-L2-Abp" kind="relationship" relationship="viewControllers" id="1R1-gJ-rJh"/>
-                        <segue destination="1uW-C4-7eC" kind="relationship" relationship="viewControllers" id="VgG-c1-BJH"/>
-                        <segue destination="HNl-22-960" kind="relationship" relationship="viewControllers" id="rsP-Rb-Poj"/>
-                        <segue destination="Ooz-Be-np0" kind="relationship" relationship="viewControllers" id="aWn-dd-0k6"/>
-                        <segue destination="NSn-DG-wnx" kind="relationship" relationship="viewControllers" id="UEj-no-IyW"/>
+                        <segue destination="yhm-VT-6au" kind="relationship" relationship="viewControllers" id="VgG-c1-BJH"/>
+                        <segue destination="3LV-sY-5ls" kind="relationship" relationship="viewControllers" id="rsP-Rb-Poj"/>
+                        <segue destination="KHF-ig-J6f" kind="relationship" relationship="viewControllers" id="aWn-dd-0k6"/>
+                        <segue destination="nLg-2s-RKf" kind="relationship" relationship="viewControllers" id="UEj-no-IyW"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cpr-Ma-QWQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1013,6 +1021,82 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UnC-ht-Ex6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1096.9465648854962" y="3012.6760563380285"/>
+        </scene>
+        <!--Ubicación-->
+        <scene sceneID="MYz-vL-6iS">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="yhm-VT-6au" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Ubicación" image="location.circle.fill" catalog="system" id="O3I-Ny-BYD"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="UGI-BF-5UE">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="1uW-C4-7eC" kind="relationship" relationship="rootViewController" id="G4I-YU-b4O"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cAk-m8-uHI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2281.679389312977" y="714.78873239436621"/>
+        </scene>
+        <!--A la carta-->
+        <scene sceneID="36x-Qt-J1u">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="3LV-sY-5ls" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="A la carta" image="fork.knife.circle.fill" catalog="system" id="69T-lh-0q6"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Uhc-x5-6x4">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="HNl-22-960" kind="relationship" relationship="rootViewController" id="Q4r-Dh-l4C"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6l5-yL-gX9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3130.5343511450378" y="714.78873239436621"/>
+        </scene>
+        <!--Créditos-->
+        <scene sceneID="hig-LJ-p3T">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="KHF-ig-J6f" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Créditos" image="creditcard.circle.fill" catalog="system" id="z0g-B6-WWU"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Qof-ro-8aj">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Ooz-Be-np0" kind="relationship" relationship="rootViewController" id="FtX-qK-Im7"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bNB-ZX-sjZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4020.6106870229005" y="714.78873239436621"/>
+        </scene>
+        <!--Opciones-->
+        <scene sceneID="Hbl-Vq-WxG">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="nLg-2s-RKf" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Opciones" image="option" catalog="system" id="auo-oN-ErN"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="aQY-fl-8eM">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="NSn-DG-wnx" kind="relationship" relationship="rootViewController" id="btv-7l-pER"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e26-Vk-9JX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4843.5114503816794" y="714.78873239436621"/>
         </scene>
     </scenes>
     <resources>
