@@ -661,7 +661,6 @@
                                         <connections>
                                             <outlet property="descripcionAdminBebidaLabel" destination="PAd-ew-xRm" id="gd8-wJ-xrC"/>
                                             <outlet property="fotoAdminBebidaImageView" destination="egV-ZR-cij" id="WFS-sU-NYu"/>
-                                            <outlet property="fotoAdminBebidaLabel" destination="egV-ZR-cij" id="YHK-Sd-qVx"/>
                                             <outlet property="nombreAdminBebidaLabel" destination="QfT-Fj-nob" id="3Cr-4M-UKE"/>
                                             <outlet property="precioAdminBebidaLabel" destination="jnx-co-r3f" id="pdT-h1-9kT"/>
                                             <outlet property="stockAdminBebidaLabel" destination="gC8-av-zV8" id="X1y-rO-6Mi"/>
@@ -679,13 +678,12 @@
                             <constraint firstItem="sft-Bs-5pT" firstAttribute="bottom" secondItem="wmQ-Ze-wta" secondAttribute="bottom" id="vqZ-Tc-H2d"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="tqa-6U-0xi">
+                    <navigationItem key="navigationItem" title="Mantenimiento de Bebidas" id="tqa-6U-0xi">
                         <barButtonItem key="leftBarButtonItem" title="Editar" image="pencil.line" catalog="system" id="00R-2r-5Gs"/>
                         <barButtonItem key="rightBarButtonItem" title="Agregar" image="plus" catalog="system" id="YmT-OG-xXt"/>
                     </navigationItem>
                     <connections>
                         <outlet property="adminBebidaTableView" destination="wmQ-Ze-wta" id="TbG-A6-Xo3"/>
-                        <outlet property="bebidasTableView" destination="wmQ-Ze-wta" id="klq-yj-4jk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U8c-Pz-EKM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -704,7 +702,7 @@
                                 <rect key="frame" x="0.0" y="44" width="393" height="759"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="197" id="AYh-s3-CZf" customClass="AdminEmpleadoTableViewCell" customModule="HuacaBrava" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="itemAdminEmpleado" rowHeight="197" id="AYh-s3-CZf" customClass="AdminEmpleadoTableViewCell" customModule="HuacaBrava" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="393" height="197"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="AYh-s3-CZf" id="oV9-fS-hLQ">
@@ -790,7 +788,6 @@
                                             <outlet property="apellidosAdminEmpleadoLabel" destination="xuo-03-Od9" id="ZKD-ht-kO4"/>
                                             <outlet property="dniAdminEmpleadoLabel" destination="4RH-wH-sUF" id="g7i-M4-A8P"/>
                                             <outlet property="fotoCarnetAdminEmpleadoImageView" destination="OKD-e8-pQV" id="mDs-Ck-HY6"/>
-                                            <outlet property="fotoCarnetAdminEmpleadoUIImage" destination="OKD-e8-pQV" id="d3H-bN-QTw"/>
                                             <outlet property="nombresAdminEmpleadoLabel" destination="fJY-p3-pPr" id="ogD-Fh-zXI"/>
                                             <outlet property="ocupacionAdminEmpleadoLabel" destination="Cnq-Uu-bdI" id="Kik-fo-IzN"/>
                                         </connections>
@@ -882,16 +879,16 @@
                                                                 </label>
                                                             </subviews>
                                                         </stackView>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Jze-Ff-qvo">
+                                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Jze-Ff-qvo">
                                                             <rect key="frame" x="0.0" y="102" width="91.666666666666671" height="14.333333333333329"/>
                                                             <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Precio:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dds-gd-TDY">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Precio:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dds-gd-TDY">
                                                                     <rect key="frame" x="0.0" y="0.0" width="42.666666666666664" height="14.333333333333334"/>
                                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="S/ 49.90" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OYF-Ek-15n">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="S/ 49.90" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OYF-Ek-15n">
                                                                     <rect key="frame" x="50.666666666666671" y="0.0" width="41" height="14.333333333333334"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                                     <nil key="textColor"/>
@@ -899,16 +896,16 @@
                                                                 </label>
                                                             </subviews>
                                                         </stackView>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="aux-tD-L15">
+                                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="aux-tD-L15">
                                                             <rect key="frame" x="0.0" y="132.66666666666666" width="59" height="14.333333333333343"/>
                                                             <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Stock:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yyj-Fy-7QK">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stock:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yyj-Fy-7QK">
                                                                     <rect key="frame" x="0.0" y="0.0" width="39" height="14.333333333333334"/>
                                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="27" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OY4-iL-Alh">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="27" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OY4-iL-Alh">
                                                                     <rect key="frame" x="46.999999999999986" y="0.0" width="12" height="14.333333333333334"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                                     <nil key="textColor"/>

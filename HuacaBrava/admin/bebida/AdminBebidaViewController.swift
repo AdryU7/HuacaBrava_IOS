@@ -17,8 +17,8 @@ class AdminBebidaViewController: UIViewController, UITableViewDataSource {
         super.viewDidLoad()
         adminBebidaTableView.dataSource = self
         
-        adminBebidaList.append(AdminBebida(nombre: "Coca Cola 1.5L", descripcion: "Bebida gaseosa", precio: "S/ 5.90", stock: "30", foto: UIImage(named: "coca_cola")))
-        adminBebidaList.append(AdminBebida(nombre: "Fanta 3L", descripcion: "Bebida gaseosa sabor naranja", precio: "S/ 7.90", stock: "24", foto: UIImage(named: "fanta_3l")))
+        adminBebidaList.append(AdminBebida(nombre: "Coca Cola 1.5L", descripcion: "Bebida gaseosa", precio: "S/ 5.90", stock: "30", foto: (UIImage(named: "coca_cola"))))
+        adminBebidaList.append(AdminBebida(nombre: "Fanta 3L", descripcion: "Bebida gaseosa sabor naranja", precio: "S/ 7.90", stock: "24", foto: (UIImage(named: "fanta_3l"))))
 
     }
 

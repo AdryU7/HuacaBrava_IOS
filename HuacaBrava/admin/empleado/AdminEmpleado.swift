@@ -13,5 +13,5 @@ struct AdminEmpleado {
     let apellidos: String
     let dni: String
     let ocupacion: String
-    let fotoCarnet: UIImage
+    let fotoCarnet: UIImage?
 }
