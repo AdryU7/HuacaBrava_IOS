@@ -92,8 +92,6 @@
 				B7350C9B2AB773E200C33F7D /* Info.plist */,
 				B70D145C2ABB5FA5001F4014 /* LoginViewController.swift */,
 				B70D145E2ABB663D001F4014 /* MenuViewController.swift */,
-				B77A6BF82ABF46FA009D55B6 /* AdminLoginViewController.swift */,
-				B77A6BFC2ABF4C32009D55B6 /* AdminViewController.swift */,
 			);
 			path = HuacaBrava;
 			sourceTree = "<group>";
@@ -101,6 +99,8 @@
 		B7446D922AC49178001D80B3 /* admin */ = {
 			isa = PBXGroup;
 			children = (
+				B77A6BF82ABF46FA009D55B6 /* AdminLoginViewController.swift */,
+				B77A6BFC2ABF4C32009D55B6 /* AdminViewController.swift */,
 				B7FD32082AC8667F00104E81 /* bebida */,
 				B7446D9B2AC49EF3001D80B3 /* empleado */,
 				B7446D932AC49188001D80B3 /* plato */,
