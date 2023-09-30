@@ -23,6 +23,9 @@
 		B7446DA12AC4A5DE001D80B3 /* AdminEmpleadoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7446DA02AC4A5DE001D80B3 /* AdminEmpleadoViewController.swift */; };
 		B77A6BF92ABF46FA009D55B6 /* AdminLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77A6BF82ABF46FA009D55B6 /* AdminLoginViewController.swift */; };
 		B77A6BFD2ABF4C32009D55B6 /* AdminViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77A6BFC2ABF4C32009D55B6 /* AdminViewController.swift */; };
+		B7FD320A2AC866A700104E81 /* AdminBebidaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FD32092AC866A700104E81 /* AdminBebidaTableViewCell.swift */; };
+		B7FD320C2AC868E000104E81 /* AdminBebida.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FD320B2AC868E000104E81 /* AdminBebida.swift */; };
+		B7FD32102AC871F500104E81 /* AdminBebidaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FD320F2AC871F500104E81 /* AdminBebidaViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +47,9 @@
 		B7446DA02AC4A5DE001D80B3 /* AdminEmpleadoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminEmpleadoViewController.swift; sourceTree = "<group>"; };
 		B77A6BF82ABF46FA009D55B6 /* AdminLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminLoginViewController.swift; sourceTree = "<group>"; };
 		B77A6BFC2ABF4C32009D55B6 /* AdminViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminViewController.swift; sourceTree = "<group>"; };
+		B7FD32092AC866A700104E81 /* AdminBebidaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminBebidaTableViewCell.swift; sourceTree = "<group>"; };
+		B7FD320B2AC868E000104E81 /* AdminBebida.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminBebida.swift; sourceTree = "<group>"; };
+		B7FD320F2AC871F500104E81 /* AdminBebidaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminBebidaViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +101,7 @@
 		B7446D922AC49178001D80B3 /* admin */ = {
 			isa = PBXGroup;
 			children = (
+				B7FD32082AC8667F00104E81 /* bebida */,
 				B7446D9B2AC49EF3001D80B3 /* empleado */,
 				B7446D932AC49188001D80B3 /* plato */,
 			);
@@ -119,6 +126,16 @@
 				B7446DA02AC4A5DE001D80B3 /* AdminEmpleadoViewController.swift */,
 			);
 			path = empleado;
+			sourceTree = "<group>";
+		};
+		B7FD32082AC8667F00104E81 /* bebida */ = {
+			isa = PBXGroup;
+			children = (
+				B7FD32092AC866A700104E81 /* AdminBebidaTableViewCell.swift */,
+				B7FD320B2AC868E000104E81 /* AdminBebida.swift */,
+				B7FD320F2AC871F500104E81 /* AdminBebidaViewController.swift */,
+			);
+			path = bebida;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -201,9 +218,12 @@
 				B7446D972AC492A0001D80B3 /* AdminPlatoViewController.swift in Sources */,
 				B7446D9D2AC4A385001D80B3 /* AdminEmpleadoTableViewCell.swift in Sources */,
 				B77A6BFD2ABF4C32009D55B6 /* AdminViewController.swift in Sources */,
+				B7FD32102AC871F500104E81 /* AdminBebidaViewController.swift in Sources */,
+				B7FD320C2AC868E000104E81 /* AdminBebida.swift in Sources */,
 				B7446D952AC491B9001D80B3 /* AdminPlatoTableViewCell.swift in Sources */,
 				B7350C922AB773E100C33F7D /* ViewController.swift in Sources */,
 				B7350C8E2AB773E100C33F7D /* AppDelegate.swift in Sources */,
+				B7FD320A2AC866A700104E81 /* AdminBebidaTableViewCell.swift in Sources */,
 				B7350C902AB773E100C33F7D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
