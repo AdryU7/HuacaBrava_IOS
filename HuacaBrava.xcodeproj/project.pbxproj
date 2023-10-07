@@ -26,6 +26,8 @@
 		B76772672AC882630024A694 /* Carta.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76772662AC882630024A694 /* Carta.swift */; };
 		B77A6BF92ABF46FA009D55B6 /* AdminLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77A6BF82ABF46FA009D55B6 /* AdminLoginViewController.swift */; };
 		B77A6BFD2ABF4C32009D55B6 /* AdminViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77A6BFC2ABF4C32009D55B6 /* AdminViewController.swift */; };
+		B7DDCDA52AD1A4B80029242D /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7DDCDA42AD1A4B80029242D /* RegisterViewController.swift */; };
+		B7DDCDA72AD1AA5A0029242D /* CartaSecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7DDCDA62AD1AA5A0029242D /* CartaSecondViewController.swift */; };
 		B7FD320A2AC866A700104E81 /* AdminBebidaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FD32092AC866A700104E81 /* AdminBebidaTableViewCell.swift */; };
 		B7FD320C2AC868E000104E81 /* AdminBebida.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FD320B2AC868E000104E81 /* AdminBebida.swift */; };
 		B7FD32102AC871F500104E81 /* AdminBebidaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FD320F2AC871F500104E81 /* AdminBebidaViewController.swift */; };
@@ -53,6 +55,8 @@
 		B76772662AC882630024A694 /* Carta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Carta.swift; sourceTree = "<group>"; };
 		B77A6BF82ABF46FA009D55B6 /* AdminLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminLoginViewController.swift; sourceTree = "<group>"; };
 		B77A6BFC2ABF4C32009D55B6 /* AdminViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminViewController.swift; sourceTree = "<group>"; };
+		B7DDCDA42AD1A4B80029242D /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		B7DDCDA62AD1AA5A0029242D /* CartaSecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartaSecondViewController.swift; sourceTree = "<group>"; };
 		B7FD32092AC866A700104E81 /* AdminBebidaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminBebidaTableViewCell.swift; sourceTree = "<group>"; };
 		B7FD320B2AC868E000104E81 /* AdminBebida.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminBebida.swift; sourceTree = "<group>"; };
 		B7FD320F2AC871F500104E81 /* AdminBebidaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminBebidaViewController.swift; sourceTree = "<group>"; };
@@ -99,6 +103,7 @@
 				B7350C9B2AB773E200C33F7D /* Info.plist */,
 				B70D145C2ABB5FA5001F4014 /* LoginViewController.swift */,
 				B70D145E2ABB663D001F4014 /* MenuViewController.swift */,
+				B7DDCDA42AD1A4B80029242D /* RegisterViewController.swift */,
 			);
 			path = HuacaBrava;
 			sourceTree = "<group>";
@@ -141,6 +146,7 @@
 				B76772622AC881BF0024A694 /* CartaTableViewCell.swift */,
 				B76772642AC882200024A694 /* CartaViewController.swift */,
 				B76772662AC882630024A694 /* Carta.swift */,
+				B7DDCDA62AD1AA5A0029242D /* CartaSecondViewController.swift */,
 			);
 			path = carta;
 			sourceTree = "<group>";
@@ -231,12 +237,14 @@
 				B7446DA12AC4A5DE001D80B3 /* AdminEmpleadoViewController.swift in Sources */,
 				B70D145D2ABB5FA5001F4014 /* LoginViewController.swift in Sources */,
 				B7446D9F2AC4A565001D80B3 /* AdminEmpleado.swift in Sources */,
+				B7DDCDA72AD1AA5A0029242D /* CartaSecondViewController.swift in Sources */,
 				B7446D992AC49344001D80B3 /* AdminPlato.swift in Sources */,
 				B76772672AC882630024A694 /* Carta.swift in Sources */,
 				B70D145F2ABB663D001F4014 /* MenuViewController.swift in Sources */,
 				B7446D972AC492A0001D80B3 /* AdminPlatoViewController.swift in Sources */,
 				B7446D9D2AC4A385001D80B3 /* AdminEmpleadoTableViewCell.swift in Sources */,
 				B77A6BFD2ABF4C32009D55B6 /* AdminViewController.swift in Sources */,
+				B7DDCDA52AD1A4B80029242D /* RegisterViewController.swift in Sources */,
 				B7FD32102AC871F500104E81 /* AdminBebidaViewController.swift in Sources */,
 				B7FD320C2AC868E000104E81 /* AdminBebida.swift in Sources */,
 				B7446D952AC491B9001D80B3 /* AdminPlatoTableViewCell.swift in Sources */,

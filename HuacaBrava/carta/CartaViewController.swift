@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CartaViewController: UIViewController, UITableViewDataSource {
+class CartaViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak var cartaTableView: UITableView!
     
@@ -16,6 +16,7 @@ class CartaViewController: UIViewController, UITableViewDataSource {
     override func viewDidLoad() {
         super.viewDidLoad()
         cartaTableView.dataSource = self
+        cartaTableView.delegate = self
         
         cartaList.append(Carta(foto: (UIImage(named: "menu_1"))))
         cartaList.append(Carta(foto: (UIImage(named: "menu_2"))))
@@ -34,6 +35,13 @@ class CartaViewController: UIViewController, UITableViewDataSource {
         cell.fotoCartaImageView.image = carta.foto
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let cartaSecondViewController = storyboard?.instantiateViewController(withIdentifier: "ImageCarta") as! CartaSecondViewController
+        let carta = cartaList[indexPath.row]
+        cartaSecondViewController.imagen = carta.foto
+        navigationController?.pushViewController(cartaSecondViewController, animated: true)
     }
 
 }

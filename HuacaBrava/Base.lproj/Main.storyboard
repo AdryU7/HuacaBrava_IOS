@@ -3,6 +3,7 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Map view configurations" minToolsVersion="14.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -252,10 +253,10 @@
             </objects>
             <point key="canvasLocation" x="131" y="1450"/>
         </scene>
-        <!--View Controller-->
+        <!--Register View Controller-->
         <scene sceneID="oM3-Vn-Ceb">
             <objects>
-                <viewController id="COT-b1-PbE" sceneMemberID="viewController">
+                <viewController id="COT-b1-PbE" customClass="RegisterViewController" customModule="HuacaBrava" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YCA-f3-7FJ">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -386,17 +387,29 @@
             </objects>
             <point key="canvasLocation" x="131" y="715"/>
         </scene>
-        <!--View Controller-->
+        <!--Ubicación de Recepción-->
         <scene sceneID="QLT-Ts-fMJ">
             <objects>
                 <viewController id="1uW-C4-7eC" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cZO-o5-3dW">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fdb-qC-Gdk">
+                                <rect key="frame" x="0.0" y="44" width="393" height="759"/>
+                                <standardMapConfiguration key="preferredConfiguration"/>
+                            </mapView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="WG4-C0-AKN"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="WG4-C0-AKN" firstAttribute="trailing" secondItem="Fdb-qC-Gdk" secondAttribute="trailing" id="2KU-qT-3Ev"/>
+                            <constraint firstItem="Fdb-qC-Gdk" firstAttribute="leading" secondItem="WG4-C0-AKN" secondAttribute="leading" id="RIQ-A1-2k1"/>
+                            <constraint firstItem="WG4-C0-AKN" firstAttribute="bottom" secondItem="Fdb-qC-Gdk" secondAttribute="bottom" id="npl-eT-mcV"/>
+                            <constraint firstItem="Fdb-qC-Gdk" firstAttribute="top" secondItem="WG4-C0-AKN" secondAttribute="top" id="sQU-wR-Xj9"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="ask-yl-nXa">
+                    <navigationItem key="navigationItem" title="Ubicación de Recepción" id="ask-yl-nXa">
                         <barButtonItem key="rightBarButtonItem" title="Carrito" image="cart.fill" catalog="system" id="ale-dW-fwi"/>
                     </navigationItem>
                 </viewController>
@@ -404,7 +417,7 @@
             </objects>
             <point key="canvasLocation" x="2282" y="1470"/>
         </scene>
-        <!--Carta View Controller-->
+        <!--A la carta-->
         <scene sceneID="Ezj-Ss-gLl">
             <objects>
                 <viewController id="HNl-22-960" customClass="CartaViewController" customModule="HuacaBrava" customModuleProvider="target" sceneMemberID="viewController">
@@ -441,6 +454,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="fotoCartaImageView" destination="qli-Uk-fKy" id="QNq-eC-5wv"/>
+                                            <segue destination="gyG-Pk-ceY" kind="show" trigger="accessoryAction" id="yyt-iC-zza"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -455,7 +469,8 @@
                             <constraint firstItem="6Yq-he-dhS" firstAttribute="trailing" secondItem="seN-Si-I94" secondAttribute="trailing" id="pXu-9j-9Qc"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="uvu-Qc-YAQ">
+                    <navigationItem key="navigationItem" title="A la carta" id="uvu-Qc-YAQ">
+                        <barButtonItem key="backBarButtonItem" title="Regresar" id="QhH-Cs-YgY"/>
                         <barButtonItem key="rightBarButtonItem" title="Item" image="cart.fill" catalog="system" id="uKt-Yc-cFI"/>
                     </navigationItem>
                     <connections>
@@ -466,7 +481,7 @@
             </objects>
             <point key="canvasLocation" x="3130.5343511450378" y="1469.7183098591549"/>
         </scene>
-        <!--View Controller-->
+        <!--Créditos-->
         <scene sceneID="7d7-lE-DGE">
             <objects>
                 <viewController id="Ooz-Be-np0" sceneMemberID="viewController">
@@ -476,7 +491,7 @@
                         <viewLayoutGuide key="safeArea" id="KoF-HD-cD6"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="8DC-Kf-VZg">
+                    <navigationItem key="navigationItem" title="Créditos" id="8DC-Kf-VZg">
                         <barButtonItem key="rightBarButtonItem" title="Item" image="cart.fill" catalog="system" id="xLB-HP-DJz"/>
                     </navigationItem>
                 </viewController>
@@ -484,7 +499,7 @@
             </objects>
             <point key="canvasLocation" x="4021" y="1470"/>
         </scene>
-        <!--View Controller-->
+        <!--Opciones-->
         <scene sceneID="Gg0-cx-wpH">
             <objects>
                 <viewController id="NSn-DG-wnx" sceneMemberID="viewController">
@@ -494,7 +509,7 @@
                         <viewLayoutGuide key="safeArea" id="AIV-rX-Bei"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="ZpE-dt-5UL">
+                    <navigationItem key="navigationItem" title="Opciones" id="ZpE-dt-5UL">
                         <barButtonItem key="rightBarButtonItem" title="Item" image="cart.fill" catalog="system" id="Xx3-ts-b0D"/>
                     </navigationItem>
                 </viewController>
@@ -502,7 +517,7 @@
             </objects>
             <point key="canvasLocation" x="4844" y="1470"/>
         </scene>
-        <!--View Controller-->
+        <!--Pantalla de Inicio-->
         <scene sceneID="efF-6a-nDt">
             <objects>
                 <viewController id="f5K-Tn-JfM" sceneMemberID="viewController">
@@ -512,7 +527,7 @@
                         <viewLayoutGuide key="safeArea" id="dIh-7B-K74"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="nB4-he-Mot">
+                    <navigationItem key="navigationItem" title="Pantalla de Inicio" id="nB4-he-Mot">
                         <barButtonItem key="rightBarButtonItem" title="Carrito" image="cart.fill" catalog="system" id="ntb-SU-sPD"/>
                     </navigationItem>
                 </viewController>
@@ -1008,6 +1023,36 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0WT-IM-usO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2023.6641221374045" y="2195.7746478873241"/>
+        </scene>
+        <!--Carta Second View Controller-->
+        <scene sceneID="nE5-bt-MsE">
+            <objects>
+                <viewController storyboardIdentifier="ImageCarta" id="gyG-Pk-ceY" customClass="CartaSecondViewController" customModule="HuacaBrava" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uTn-b3-uf6">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5bg-Qa-iYo">
+                                <rect key="frame" x="0.0" y="44" width="393" height="759"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="gec-rP-ViE"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="gec-rP-ViE" firstAttribute="trailing" secondItem="5bg-Qa-iYo" secondAttribute="trailing" id="6mG-kk-SOk"/>
+                            <constraint firstItem="5bg-Qa-iYo" firstAttribute="leading" secondItem="gec-rP-ViE" secondAttribute="leading" id="Tfh-Ow-MUp"/>
+                            <constraint firstItem="gec-rP-ViE" firstAttribute="bottom" secondItem="5bg-Qa-iYo" secondAttribute="bottom" id="b2g-k2-DWL"/>
+                            <constraint firstItem="5bg-Qa-iYo" firstAttribute="top" secondItem="gec-rP-ViE" secondAttribute="top" id="kmm-Y4-IjE"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="l4N-LM-hhH"/>
+                    <connections>
+                        <outlet property="fotoCartaImageView" destination="5bg-Qa-iYo" id="Tja-bZ-rNR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6ES-Bk-3mg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3131" y="2196"/>
         </scene>
         <!--Platos-->
         <scene sceneID="Jkv-8B-xII">
