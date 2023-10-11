@@ -1034,6 +1034,11 @@
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5bg-Qa-iYo">
                                 <rect key="frame" x="0.0" y="103" width="393" height="666"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="02r-ap-VDn" appends="YES" id="qGR-Rf-v4R"/>
+                                    <outletCollection property="gestureRecognizers" destination="02r-ap-VDn" appends="YES" id="E6Z-b5-wGK"/>
+                                </connections>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="gec-rP-ViE"/>
@@ -1051,6 +1056,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6ES-Bk-3mg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <pinchGestureRecognizer id="02r-ap-VDn">
+                    <connections>
+                        <action selector="pinchImage:" destination="gyG-Pk-ceY" id="44P-CU-eDN"/>
+                    </connections>
+                </pinchGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="3131" y="2196"/>
         </scene>
