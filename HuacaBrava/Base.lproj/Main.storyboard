@@ -153,20 +153,21 @@
             </objects>
             <point key="canvasLocation" x="1057" y="-706"/>
         </scene>
-        <!--View Controller-->
+        <!--Carrito View Controller-->
         <scene sceneID="cna-J9-eYa">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="UgO-Az-nuC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <viewController id="00h-zG-ZDi" sceneMemberID="viewController">
+                <viewController id="00h-zG-ZDi" customClass="CarritoViewController" customModule="HuacaBrava" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rWZ-5v-rj3">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="12T-H0-p9k"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="twY-l3-5IM"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UgO-Az-nuC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1321" y="795"/>
+            <point key="canvasLocation" x="6561" y="2155"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -569,12 +570,16 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Ubicación de Recepción" id="ask-yl-nXa">
-                        <barButtonItem key="rightBarButtonItem" title="Carrito" image="cart.fill" catalog="system" id="ale-dW-fwi"/>
+                        <barButtonItem key="rightBarButtonItem" title="Carrito" image="cart.fill" catalog="system" id="ale-dW-fwi">
+                            <connections>
+                                <segue destination="00h-zG-ZDi" kind="presentation" id="rbH-0c-Nx0"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="poS-LP-u6t" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2282" y="1470"/>
+            <point key="canvasLocation" x="3231" y="1470"/>
         </scene>
         <!--A la carta-->
         <scene sceneID="Ezj-Ss-gLl">
@@ -630,7 +635,11 @@
                     </view>
                     <navigationItem key="navigationItem" title="A la carta" id="uvu-Qc-YAQ">
                         <barButtonItem key="backBarButtonItem" title="Regresar" id="QhH-Cs-YgY"/>
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="cart.fill" catalog="system" id="uKt-Yc-cFI"/>
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="cart.fill" catalog="system" id="uKt-Yc-cFI">
+                            <connections>
+                                <segue destination="00h-zG-ZDi" kind="presentation" id="ds2-iR-tsk"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="cartaTableView" destination="seN-Si-I94" id="Oek-xW-c4X"/>
@@ -638,7 +647,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3j9-gm-f9F" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3130.5343511450378" y="1469.7183098591549"/>
+            <point key="canvasLocation" x="4083" y="1470"/>
         </scene>
         <!--Créditos-->
         <scene sceneID="7d7-lE-DGE">
@@ -651,12 +660,16 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" title="Créditos" id="8DC-Kf-VZg">
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="cart.fill" catalog="system" id="xLB-HP-DJz"/>
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="cart.fill" catalog="system" id="xLB-HP-DJz">
+                            <connections>
+                                <segue destination="00h-zG-ZDi" kind="presentation" id="VXr-rn-I7D"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EUq-Ox-OSm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4021" y="1470"/>
+            <point key="canvasLocation" x="4973" y="1470"/>
         </scene>
         <!--Opciones-->
         <scene sceneID="Gg0-cx-wpH">
@@ -669,12 +682,16 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" title="Opciones" id="ZpE-dt-5UL">
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="cart.fill" catalog="system" id="Xx3-ts-b0D"/>
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="cart.fill" catalog="system" id="Xx3-ts-b0D">
+                            <connections>
+                                <segue destination="00h-zG-ZDi" kind="presentation" id="B1e-Vh-xv9"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sg3-if-jeL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4844" y="1470"/>
+            <point key="canvasLocation" x="5796" y="1470"/>
         </scene>
         <!--Pantalla de Inicio-->
         <scene sceneID="efF-6a-nDt">
@@ -683,16 +700,34 @@
                     <view key="view" contentMode="scaleToFill" id="MA1-mg-VKs">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="yAq-Ox-p06">
+                                <rect key="frame" x="0.0" y="103" width="393" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="f5K-Tn-JfM" id="9cr-9M-f4f"/>
+                                </connections>
+                            </searchBar>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="dIh-7B-K74"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="yAq-Ox-p06" firstAttribute="trailing" secondItem="dIh-7B-K74" secondAttribute="trailing" id="2zd-A0-NjK"/>
+                            <constraint firstItem="yAq-Ox-p06" firstAttribute="leading" secondItem="dIh-7B-K74" secondAttribute="leading" id="48y-VH-gvp"/>
+                            <constraint firstItem="yAq-Ox-p06" firstAttribute="top" secondItem="dIh-7B-K74" secondAttribute="top" id="GhY-Kd-vHK"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Pantalla de Inicio" id="nB4-he-Mot">
-                        <barButtonItem key="rightBarButtonItem" title="Carrito" image="cart.fill" catalog="system" id="ntb-SU-sPD"/>
+                        <barButtonItem key="rightBarButtonItem" title="Carrito" image="cart.fill" catalog="system" id="ntb-SU-sPD">
+                            <connections>
+                                <segue destination="00h-zG-ZDi" kind="presentation" id="W4E-Jj-hVQ"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m0c-fE-n8Y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4083.2061068702287" y="-27.464788732394368"/>
+            <point key="canvasLocation" x="2282" y="1470"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="cXk-b4-fjq">
@@ -752,7 +787,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yql-Qo-MpW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3156.4885496183206" y="-27.464788732394368"/>
+            <point key="canvasLocation" x="2282" y="715"/>
         </scene>
         <!--Admin View Controller-->
         <scene sceneID="bq4-EO-I2c">
@@ -1181,7 +1216,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0WT-IM-usO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2023.6641221374045" y="2195.7746478873241"/>
+            <point key="canvasLocation" x="1992" y="2196"/>
         </scene>
         <!--Carta Second View Controller-->
         <scene sceneID="nE5-bt-MsE">
@@ -1221,7 +1256,7 @@
                     </connections>
                 </pinchGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="3131" y="2196"/>
+            <point key="canvasLocation" x="4083" y="2196"/>
         </scene>
         <!--Platos-->
         <scene sceneID="Jkv-8B-xII">
@@ -1297,7 +1332,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cAk-m8-uHI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2281.679389312977" y="714.78873239436621"/>
+            <point key="canvasLocation" x="3231" y="715"/>
         </scene>
         <!--A la carta-->
         <scene sceneID="36x-Qt-J1u">
@@ -1316,7 +1351,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6l5-yL-gX9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3130.5343511450378" y="714.78873239436621"/>
+            <point key="canvasLocation" x="4083" y="715"/>
         </scene>
         <!--Créditos-->
         <scene sceneID="hig-LJ-p3T">
@@ -1335,7 +1370,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bNB-ZX-sjZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4020.6106870229005" y="714.78873239436621"/>
+            <point key="canvasLocation" x="4973" y="715"/>
         </scene>
         <!--Opciones-->
         <scene sceneID="Hbl-Vq-WxG">
@@ -1354,7 +1389,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e26-Vk-9JX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4843.5114503816794" y="714.78873239436621"/>
+            <point key="canvasLocation" x="5796" y="715"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="kP9-8b-mW0">
@@ -1379,6 +1414,7 @@
         <segue reference="GzX-59-08Z"/>
         <segue reference="y6u-ps-PHG"/>
         <segue reference="ZBj-Xh-Qwc"/>
+        <segue reference="B1e-Vh-xv9"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="brasa_fondo" width="866" height="1297"/>

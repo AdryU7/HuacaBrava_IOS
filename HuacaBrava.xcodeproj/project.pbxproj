@@ -29,6 +29,7 @@
 		B7C5363F2AD716CC0083609C /* LoginAltViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C5363E2AD716CC0083609C /* LoginAltViewController.swift */; };
 		B7DDCDA52AD1A4B80029242D /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7DDCDA42AD1A4B80029242D /* RegisterViewController.swift */; };
 		B7DDCDA72AD1AA5A0029242D /* CartaSecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7DDCDA62AD1AA5A0029242D /* CartaSecondViewController.swift */; };
+		B7E7D8BB2AD7208E0050D737 /* CarritoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E7D8BA2AD7208E0050D737 /* CarritoViewController.swift */; };
 		B7FD320A2AC866A700104E81 /* AdminBebidaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FD32092AC866A700104E81 /* AdminBebidaTableViewCell.swift */; };
 		B7FD320C2AC868E000104E81 /* AdminBebida.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FD320B2AC868E000104E81 /* AdminBebida.swift */; };
 		B7FD32102AC871F500104E81 /* AdminBebidaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FD320F2AC871F500104E81 /* AdminBebidaViewController.swift */; };
@@ -59,6 +60,7 @@
 		B7C5363E2AD716CC0083609C /* LoginAltViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAltViewController.swift; sourceTree = "<group>"; };
 		B7DDCDA42AD1A4B80029242D /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		B7DDCDA62AD1AA5A0029242D /* CartaSecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartaSecondViewController.swift; sourceTree = "<group>"; };
+		B7E7D8BA2AD7208E0050D737 /* CarritoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarritoViewController.swift; sourceTree = "<group>"; };
 		B7FD32092AC866A700104E81 /* AdminBebidaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminBebidaTableViewCell.swift; sourceTree = "<group>"; };
 		B7FD320B2AC868E000104E81 /* AdminBebida.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminBebida.swift; sourceTree = "<group>"; };
 		B7FD320F2AC871F500104E81 /* AdminBebidaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminBebidaViewController.swift; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 				B70D145E2ABB663D001F4014 /* MenuViewController.swift */,
 				B7DDCDA42AD1A4B80029242D /* RegisterViewController.swift */,
 				B7C5363E2AD716CC0083609C /* LoginAltViewController.swift */,
+				B7E7D8BA2AD7208E0050D737 /* CarritoViewController.swift */,
 			);
 			path = HuacaBrava;
 			sourceTree = "<group>";
@@ -240,6 +243,7 @@
 				B7C5363F2AD716CC0083609C /* LoginAltViewController.swift in Sources */,
 				B7446DA12AC4A5DE001D80B3 /* AdminEmpleadoViewController.swift in Sources */,
 				B70D145D2ABB5FA5001F4014 /* LoginViewController.swift in Sources */,
+				B7E7D8BB2AD7208E0050D737 /* CarritoViewController.swift in Sources */,
 				B7446D9F2AC4A565001D80B3 /* AdminEmpleado.swift in Sources */,
 				B7DDCDA72AD1AA5A0029242D /* CartaSecondViewController.swift in Sources */,
 				B7446D992AC49344001D80B3 /* AdminPlato.swift in Sources */,
