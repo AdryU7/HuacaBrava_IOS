@@ -28,6 +28,7 @@
 		B77A6BF92ABF46FA009D55B6 /* AdminLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77A6BF82ABF46FA009D55B6 /* AdminLoginViewController.swift */; };
 		B77A6BFD2ABF4C32009D55B6 /* AdminViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77A6BFC2ABF4C32009D55B6 /* AdminViewController.swift */; };
 		B7C5363F2AD716CC0083609C /* LoginAltViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C5363E2AD716CC0083609C /* LoginAltViewController.swift */; };
+		B7D8199C2ADB034400D019B9 /* CreditosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D8199B2ADB034400D019B9 /* CreditosViewController.swift */; };
 		B7DDCDA52AD1A4B80029242D /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7DDCDA42AD1A4B80029242D /* RegisterViewController.swift */; };
 		B7DDCDA72AD1AA5A0029242D /* CartaSecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7DDCDA62AD1AA5A0029242D /* CartaSecondViewController.swift */; };
 		B7E7D8BB2AD7208E0050D737 /* CarritoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E7D8BA2AD7208E0050D737 /* CarritoViewController.swift */; };
@@ -60,6 +61,7 @@
 		B77A6BF82ABF46FA009D55B6 /* AdminLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminLoginViewController.swift; sourceTree = "<group>"; };
 		B77A6BFC2ABF4C32009D55B6 /* AdminViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminViewController.swift; sourceTree = "<group>"; };
 		B7C5363E2AD716CC0083609C /* LoginAltViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAltViewController.swift; sourceTree = "<group>"; };
+		B7D8199B2ADB034400D019B9 /* CreditosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditosViewController.swift; sourceTree = "<group>"; };
 		B7DDCDA42AD1A4B80029242D /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		B7DDCDA62AD1AA5A0029242D /* CartaSecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartaSecondViewController.swift; sourceTree = "<group>"; };
 		B7E7D8BA2AD7208E0050D737 /* CarritoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarritoViewController.swift; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 				B7C5363E2AD716CC0083609C /* LoginAltViewController.swift */,
 				B7E7D8BA2AD7208E0050D737 /* CarritoViewController.swift */,
 				B747EF8A2ADAE55F00589DA7 /* RegisterAltViewController.swift */,
+				B7D8199B2ADB034400D019B9 /* CreditosViewController.swift */,
 			);
 			path = HuacaBrava;
 			sourceTree = "<group>";
@@ -250,6 +253,7 @@
 				B7446D9F2AC4A565001D80B3 /* AdminEmpleado.swift in Sources */,
 				B7DDCDA72AD1AA5A0029242D /* CartaSecondViewController.swift in Sources */,
 				B7446D992AC49344001D80B3 /* AdminPlato.swift in Sources */,
+				B7D8199C2ADB034400D019B9 /* CreditosViewController.swift in Sources */,
 				B76772672AC882630024A694 /* Carta.swift in Sources */,
 				B70D145F2ABB663D001F4014 /* MenuViewController.swift in Sources */,
 				B7446D972AC492A0001D80B3 /* AdminPlatoViewController.swift in Sources */,
