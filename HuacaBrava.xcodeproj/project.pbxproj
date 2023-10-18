@@ -25,6 +25,13 @@
 		B76772632AC881BF0024A694 /* CartaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76772622AC881BF0024A694 /* CartaTableViewCell.swift */; };
 		B76772652AC882200024A694 /* CartaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76772642AC882200024A694 /* CartaViewController.swift */; };
 		B76772672AC882630024A694 /* Carta.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76772662AC882630024A694 /* Carta.swift */; };
+		B76F6FE02AE038D80036D73C /* CartaAltViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76F6FDF2AE038D80036D73C /* CartaAltViewController.swift */; };
+		B76F6FE22AE03E320036D73C /* CartaAlt.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76F6FE12AE03E320036D73C /* CartaAlt.swift */; };
+		B76F6FE42AE040210036D73C /* CartaAltTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76F6FE32AE040210036D73C /* CartaAltTableViewCell.swift */; };
+		B76F6FE62AE040F50036D73C /* CartaDetalleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76F6FE52AE040F50036D73C /* CartaDetalleViewController.swift */; };
+		B76F6FE82AE0469D0036D73C /* MontoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76F6FE72AE0469D0036D73C /* MontoViewController.swift */; };
+		B76F6FEA2AE049C50036D73C /* InicioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76F6FE92AE049C50036D73C /* InicioViewController.swift */; };
+		B76F6FEC2AE049E40036D73C /* UbicacionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76F6FEB2AE049E40036D73C /* UbicacionViewController.swift */; };
 		B77A6BF92ABF46FA009D55B6 /* AdminLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77A6BF82ABF46FA009D55B6 /* AdminLoginViewController.swift */; };
 		B77A6BFD2ABF4C32009D55B6 /* AdminViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77A6BFC2ABF4C32009D55B6 /* AdminViewController.swift */; };
 		B7C5363F2AD716CC0083609C /* LoginAltViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C5363E2AD716CC0083609C /* LoginAltViewController.swift */; };
@@ -58,6 +65,13 @@
 		B76772622AC881BF0024A694 /* CartaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartaTableViewCell.swift; sourceTree = "<group>"; };
 		B76772642AC882200024A694 /* CartaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartaViewController.swift; sourceTree = "<group>"; };
 		B76772662AC882630024A694 /* Carta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Carta.swift; sourceTree = "<group>"; };
+		B76F6FDF2AE038D80036D73C /* CartaAltViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartaAltViewController.swift; sourceTree = "<group>"; };
+		B76F6FE12AE03E320036D73C /* CartaAlt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartaAlt.swift; sourceTree = "<group>"; };
+		B76F6FE32AE040210036D73C /* CartaAltTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartaAltTableViewCell.swift; sourceTree = "<group>"; };
+		B76F6FE52AE040F50036D73C /* CartaDetalleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartaDetalleViewController.swift; sourceTree = "<group>"; };
+		B76F6FE72AE0469D0036D73C /* MontoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MontoViewController.swift; sourceTree = "<group>"; };
+		B76F6FE92AE049C50036D73C /* InicioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InicioViewController.swift; sourceTree = "<group>"; };
+		B76F6FEB2AE049E40036D73C /* UbicacionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UbicacionViewController.swift; sourceTree = "<group>"; };
 		B77A6BF82ABF46FA009D55B6 /* AdminLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminLoginViewController.swift; sourceTree = "<group>"; };
 		B77A6BFC2ABF4C32009D55B6 /* AdminViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminViewController.swift; sourceTree = "<group>"; };
 		B7C5363E2AD716CC0083609C /* LoginAltViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAltViewController.swift; sourceTree = "<group>"; };
@@ -116,6 +130,9 @@
 				B7E7D8BA2AD7208E0050D737 /* CarritoViewController.swift */,
 				B747EF8A2ADAE55F00589DA7 /* RegisterAltViewController.swift */,
 				B7D8199B2ADB034400D019B9 /* CreditosViewController.swift */,
+				B76F6FE72AE0469D0036D73C /* MontoViewController.swift */,
+				B76F6FE92AE049C50036D73C /* InicioViewController.swift */,
+				B76F6FEB2AE049E40036D73C /* UbicacionViewController.swift */,
 			);
 			path = HuacaBrava;
 			sourceTree = "<group>";
@@ -159,6 +176,10 @@
 				B76772642AC882200024A694 /* CartaViewController.swift */,
 				B76772662AC882630024A694 /* Carta.swift */,
 				B7DDCDA62AD1AA5A0029242D /* CartaSecondViewController.swift */,
+				B76F6FDF2AE038D80036D73C /* CartaAltViewController.swift */,
+				B76F6FE12AE03E320036D73C /* CartaAlt.swift */,
+				B76F6FE32AE040210036D73C /* CartaAltTableViewCell.swift */,
+				B76F6FE52AE040F50036D73C /* CartaDetalleViewController.swift */,
 			);
 			path = carta;
 			sourceTree = "<group>";
@@ -248,8 +269,10 @@
 				B77A6BF92ABF46FA009D55B6 /* AdminLoginViewController.swift in Sources */,
 				B7C5363F2AD716CC0083609C /* LoginAltViewController.swift in Sources */,
 				B7446DA12AC4A5DE001D80B3 /* AdminEmpleadoViewController.swift in Sources */,
+				B76F6FEC2AE049E40036D73C /* UbicacionViewController.swift in Sources */,
 				B70D145D2ABB5FA5001F4014 /* LoginViewController.swift in Sources */,
 				B7E7D8BB2AD7208E0050D737 /* CarritoViewController.swift in Sources */,
+				B76F6FE82AE0469D0036D73C /* MontoViewController.swift in Sources */,
 				B7446D9F2AC4A565001D80B3 /* AdminEmpleado.swift in Sources */,
 				B7DDCDA72AD1AA5A0029242D /* CartaSecondViewController.swift in Sources */,
 				B7446D992AC49344001D80B3 /* AdminPlato.swift in Sources */,
@@ -257,16 +280,21 @@
 				B76772672AC882630024A694 /* Carta.swift in Sources */,
 				B70D145F2ABB663D001F4014 /* MenuViewController.swift in Sources */,
 				B7446D972AC492A0001D80B3 /* AdminPlatoViewController.swift in Sources */,
+				B76F6FE62AE040F50036D73C /* CartaDetalleViewController.swift in Sources */,
+				B76F6FE42AE040210036D73C /* CartaAltTableViewCell.swift in Sources */,
 				B7446D9D2AC4A385001D80B3 /* AdminEmpleadoTableViewCell.swift in Sources */,
+				B76F6FE02AE038D80036D73C /* CartaAltViewController.swift in Sources */,
 				B77A6BFD2ABF4C32009D55B6 /* AdminViewController.swift in Sources */,
 				B7DDCDA52AD1A4B80029242D /* RegisterViewController.swift in Sources */,
 				B747EF8B2ADAE55F00589DA7 /* RegisterAltViewController.swift in Sources */,
+				B76F6FEA2AE049C50036D73C /* InicioViewController.swift in Sources */,
 				B7FD32102AC871F500104E81 /* AdminBebidaViewController.swift in Sources */,
 				B7FD320C2AC868E000104E81 /* AdminBebida.swift in Sources */,
 				B7446D952AC491B9001D80B3 /* AdminPlatoTableViewCell.swift in Sources */,
 				B7350C922AB773E100C33F7D /* ViewController.swift in Sources */,
 				B7350C8E2AB773E100C33F7D /* AppDelegate.swift in Sources */,
 				B76772632AC881BF0024A694 /* CartaTableViewCell.swift in Sources */,
+				B76F6FE22AE03E320036D73C /* CartaAlt.swift in Sources */,
 				B7FD320A2AC866A700104E81 /* AdminBebidaTableViewCell.swift in Sources */,
 				B7350C902AB773E100C33F7D /* SceneDelegate.swift in Sources */,
 			);
