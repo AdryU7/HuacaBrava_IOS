@@ -35,6 +35,7 @@
 		B77A6BF92ABF46FA009D55B6 /* AdminLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77A6BF82ABF46FA009D55B6 /* AdminLoginViewController.swift */; };
 		B77A6BFD2ABF4C32009D55B6 /* AdminViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77A6BFC2ABF4C32009D55B6 /* AdminViewController.swift */; };
 		B7C5363F2AD716CC0083609C /* LoginAltViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C5363E2AD716CC0083609C /* LoginAltViewController.swift */; };
+		B7D41D162AE9929200DA7757 /* InicioCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D41D152AE9929200DA7757 /* InicioCollectionViewCell.swift */; };
 		B7D8199C2ADB034400D019B9 /* CreditosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D8199B2ADB034400D019B9 /* CreditosViewController.swift */; };
 		B7DDCDA52AD1A4B80029242D /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7DDCDA42AD1A4B80029242D /* RegisterViewController.swift */; };
 		B7DDCDA72AD1AA5A0029242D /* CartaSecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7DDCDA62AD1AA5A0029242D /* CartaSecondViewController.swift */; };
@@ -75,6 +76,7 @@
 		B77A6BF82ABF46FA009D55B6 /* AdminLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminLoginViewController.swift; sourceTree = "<group>"; };
 		B77A6BFC2ABF4C32009D55B6 /* AdminViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminViewController.swift; sourceTree = "<group>"; };
 		B7C5363E2AD716CC0083609C /* LoginAltViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAltViewController.swift; sourceTree = "<group>"; };
+		B7D41D152AE9929200DA7757 /* InicioCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InicioCollectionViewCell.swift; sourceTree = "<group>"; };
 		B7D8199B2ADB034400D019B9 /* CreditosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditosViewController.swift; sourceTree = "<group>"; };
 		B7DDCDA42AD1A4B80029242D /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		B7DDCDA62AD1AA5A0029242D /* CartaSecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartaSecondViewController.swift; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 		B7350C8C2AB773E100C33F7D /* HuacaBrava */ = {
 			isa = PBXGroup;
 			children = (
+				B7D41D142AE9922400DA7757 /* inicio */,
 				B76772612AC8818F0024A694 /* carta */,
 				B7446D922AC49178001D80B3 /* admin */,
 				B7350C8D2AB773E100C33F7D /* AppDelegate.swift */,
@@ -128,10 +131,10 @@
 				B7DDCDA42AD1A4B80029242D /* RegisterViewController.swift */,
 				B7C5363E2AD716CC0083609C /* LoginAltViewController.swift */,
 				B7E7D8BA2AD7208E0050D737 /* CarritoViewController.swift */,
+				B76F6FE92AE049C50036D73C /* InicioViewController.swift */,
 				B747EF8A2ADAE55F00589DA7 /* RegisterAltViewController.swift */,
 				B7D8199B2ADB034400D019B9 /* CreditosViewController.swift */,
 				B76F6FE72AE0469D0036D73C /* MontoViewController.swift */,
-				B76F6FE92AE049C50036D73C /* InicioViewController.swift */,
 				B76F6FEB2AE049E40036D73C /* UbicacionViewController.swift */,
 			);
 			path = HuacaBrava;
@@ -182,6 +185,14 @@
 				B76F6FE52AE040F50036D73C /* CartaDetalleViewController.swift */,
 			);
 			path = carta;
+			sourceTree = "<group>";
+		};
+		B7D41D142AE9922400DA7757 /* inicio */ = {
+			isa = PBXGroup;
+			children = (
+				B7D41D152AE9929200DA7757 /* InicioCollectionViewCell.swift */,
+			);
+			path = inicio;
 			sourceTree = "<group>";
 		};
 		B7FD32082AC8667F00104E81 /* bebida */ = {
@@ -289,6 +300,7 @@
 				B747EF8B2ADAE55F00589DA7 /* RegisterAltViewController.swift in Sources */,
 				B76F6FEA2AE049C50036D73C /* InicioViewController.swift in Sources */,
 				B7FD32102AC871F500104E81 /* AdminBebidaViewController.swift in Sources */,
+				B7D41D162AE9929200DA7757 /* InicioCollectionViewCell.swift in Sources */,
 				B7FD320C2AC868E000104E81 /* AdminBebida.swift in Sources */,
 				B7446D952AC491B9001D80B3 /* AdminPlatoTableViewCell.swift in Sources */,
 				B7350C922AB773E100C33F7D /* ViewController.swift in Sources */,
