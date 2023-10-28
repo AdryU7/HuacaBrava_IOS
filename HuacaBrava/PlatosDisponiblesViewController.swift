@@ -63,6 +63,14 @@ class PlatosDisponiblesViewController: UIViewController, UITableViewDataSource {
         } catch let error as NSError {
             print("Error al guardar en el carrito")
         }
+        
+        showAlert(mensaje: "Cambios aplicados")
     }
     
+    func showAlert(mensaje : String){
+        let alert = UIAlertController(title: "Aviso", message: mensaje, preferredStyle: .alert)
+        let button = UIAlertAction(title: "Entendido", style:.default)
+        alert.addAction(button)
+        self.present(alert, animated: true)
+    }
 }

@@ -2,7 +2,7 @@
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="21754" systemVersion="22E252" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="CarritoEntity" representedClassName="CarritoEntity" syncable="YES" codeGenerationType="class">
         <attribute name="cantidad" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
-        <attribute name="foto" optional="YES" attributeType="String"/>
+        <attribute name="foto" attributeType="String" defaultValueString=""/>
         <attribute name="nombre" optional="YES" attributeType="String"/>
         <attribute name="precio" optional="YES" attributeType="String"/>
         <attribute name="stock" optional="YES" attributeType="String"/>

@@ -33,7 +33,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     lazy var persistentContainer: NSPersistentContainer = {
-        let container = NSPersistentContainer(name: "CibertecDataModel")
+        let container = NSPersistentContainer(name: "HuacaBravaDataModel")
         container.loadPersistentStores(completionHandler: { (storeDescripcion, error) in
             if let error = error as NSError? {
                 fatalError("Se presento un error")
