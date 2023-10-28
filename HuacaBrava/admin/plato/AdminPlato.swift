@@ -13,5 +13,5 @@ struct AdminPlato {
     let descripcion: String
     let precio: String
     let stock: String
-    let foto: UIImage?
+    let foto: String
 }

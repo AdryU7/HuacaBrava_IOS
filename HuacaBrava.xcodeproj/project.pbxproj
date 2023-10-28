@@ -40,6 +40,11 @@
 		B7DDCDA52AD1A4B80029242D /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7DDCDA42AD1A4B80029242D /* RegisterViewController.swift */; };
 		B7DDCDA72AD1AA5A0029242D /* CartaSecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7DDCDA62AD1AA5A0029242D /* CartaSecondViewController.swift */; };
 		B7E7D8BB2AD7208E0050D737 /* CarritoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E7D8BA2AD7208E0050D737 /* CarritoViewController.swift */; };
+		B7E935782AED5B61003579B9 /* HuacaBravaDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B7E935762AED5B61003579B9 /* HuacaBravaDataModel.xcdatamodeld */; };
+		B7E9357A2AED63C4003579B9 /* PlatosDisponiblesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E935792AED63C4003579B9 /* PlatosDisponiblesViewController.swift */; };
+		B7E9357E2AED6727003579B9 /* Plato.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E9357D2AED6727003579B9 /* Plato.swift */; };
+		B7E935802AED6805003579B9 /* PlatoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E9357F2AED6805003579B9 /* PlatoTableViewCell.swift */; };
+		B7E935822AED7755003579B9 /* CarritoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E935812AED7755003579B9 /* CarritoTableViewCell.swift */; };
 		B7FD320A2AC866A700104E81 /* AdminBebidaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FD32092AC866A700104E81 /* AdminBebidaTableViewCell.swift */; };
 		B7FD320C2AC868E000104E81 /* AdminBebida.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FD320B2AC868E000104E81 /* AdminBebida.swift */; };
 		B7FD32102AC871F500104E81 /* AdminBebidaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FD320F2AC871F500104E81 /* AdminBebidaViewController.swift */; };
@@ -81,6 +86,11 @@
 		B7DDCDA42AD1A4B80029242D /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		B7DDCDA62AD1AA5A0029242D /* CartaSecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartaSecondViewController.swift; sourceTree = "<group>"; };
 		B7E7D8BA2AD7208E0050D737 /* CarritoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarritoViewController.swift; sourceTree = "<group>"; };
+		B7E935772AED5B61003579B9 /* HuacaBravaDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HuacaBravaDataModel.xcdatamodel; sourceTree = "<group>"; };
+		B7E935792AED63C4003579B9 /* PlatosDisponiblesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlatosDisponiblesViewController.swift; sourceTree = "<group>"; };
+		B7E9357D2AED6727003579B9 /* Plato.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plato.swift; sourceTree = "<group>"; };
+		B7E9357F2AED6805003579B9 /* PlatoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlatoTableViewCell.swift; sourceTree = "<group>"; };
+		B7E935812AED7755003579B9 /* CarritoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarritoTableViewCell.swift; sourceTree = "<group>"; };
 		B7FD32092AC866A700104E81 /* AdminBebidaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminBebidaTableViewCell.swift; sourceTree = "<group>"; };
 		B7FD320B2AC868E000104E81 /* AdminBebida.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminBebida.swift; sourceTree = "<group>"; };
 		B7FD320F2AC871F500104E81 /* AdminBebidaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminBebidaViewController.swift; sourceTree = "<group>"; };
@@ -116,6 +126,8 @@
 		B7350C8C2AB773E100C33F7D /* HuacaBrava */ = {
 			isa = PBXGroup;
 			children = (
+				B7E9357B2AED66FA003579B9 /* cliente */,
+				B7E935752AED5ADE003579B9 /* carrito */,
 				B7D41D142AE9922400DA7757 /* inicio */,
 				B76772612AC8818F0024A694 /* carta */,
 				B7446D922AC49178001D80B3 /* admin */,
@@ -136,6 +148,8 @@
 				B7D8199B2ADB034400D019B9 /* CreditosViewController.swift */,
 				B76F6FE72AE0469D0036D73C /* MontoViewController.swift */,
 				B76F6FEB2AE049E40036D73C /* UbicacionViewController.swift */,
+				B7E935762AED5B61003579B9 /* HuacaBravaDataModel.xcdatamodeld */,
+				B7E935792AED63C4003579B9 /* PlatosDisponiblesViewController.swift */,
 			);
 			path = HuacaBrava;
 			sourceTree = "<group>";
@@ -193,6 +207,31 @@
 				B7D41D152AE9929200DA7757 /* InicioCollectionViewCell.swift */,
 			);
 			path = inicio;
+			sourceTree = "<group>";
+		};
+		B7E935752AED5ADE003579B9 /* carrito */ = {
+			isa = PBXGroup;
+			children = (
+				B7E935812AED7755003579B9 /* CarritoTableViewCell.swift */,
+			);
+			path = carrito;
+			sourceTree = "<group>";
+		};
+		B7E9357B2AED66FA003579B9 /* cliente */ = {
+			isa = PBXGroup;
+			children = (
+				B7E9357C2AED670C003579B9 /* platos */,
+			);
+			path = cliente;
+			sourceTree = "<group>";
+		};
+		B7E9357C2AED670C003579B9 /* platos */ = {
+			isa = PBXGroup;
+			children = (
+				B7E9357D2AED6727003579B9 /* Plato.swift */,
+				B7E9357F2AED6805003579B9 /* PlatoTableViewCell.swift */,
+			);
+			path = platos;
 			sourceTree = "<group>";
 		};
 		B7FD32082AC8667F00104E81 /* bebida */ = {
@@ -278,6 +317,7 @@
 			files = (
 				B76772652AC882200024A694 /* CartaViewController.swift in Sources */,
 				B77A6BF92ABF46FA009D55B6 /* AdminLoginViewController.swift in Sources */,
+				B7E935802AED6805003579B9 /* PlatoTableViewCell.swift in Sources */,
 				B7C5363F2AD716CC0083609C /* LoginAltViewController.swift in Sources */,
 				B7446DA12AC4A5DE001D80B3 /* AdminEmpleadoViewController.swift in Sources */,
 				B76F6FEC2AE049E40036D73C /* UbicacionViewController.swift in Sources */,
@@ -294,20 +334,24 @@
 				B76F6FE62AE040F50036D73C /* CartaDetalleViewController.swift in Sources */,
 				B76F6FE42AE040210036D73C /* CartaAltTableViewCell.swift in Sources */,
 				B7446D9D2AC4A385001D80B3 /* AdminEmpleadoTableViewCell.swift in Sources */,
+				B7E9357E2AED6727003579B9 /* Plato.swift in Sources */,
 				B76F6FE02AE038D80036D73C /* CartaAltViewController.swift in Sources */,
 				B77A6BFD2ABF4C32009D55B6 /* AdminViewController.swift in Sources */,
 				B7DDCDA52AD1A4B80029242D /* RegisterViewController.swift in Sources */,
 				B747EF8B2ADAE55F00589DA7 /* RegisterAltViewController.swift in Sources */,
 				B76F6FEA2AE049C50036D73C /* InicioViewController.swift in Sources */,
 				B7FD32102AC871F500104E81 /* AdminBebidaViewController.swift in Sources */,
+				B7E9357A2AED63C4003579B9 /* PlatosDisponiblesViewController.swift in Sources */,
 				B7D41D162AE9929200DA7757 /* InicioCollectionViewCell.swift in Sources */,
 				B7FD320C2AC868E000104E81 /* AdminBebida.swift in Sources */,
 				B7446D952AC491B9001D80B3 /* AdminPlatoTableViewCell.swift in Sources */,
 				B7350C922AB773E100C33F7D /* ViewController.swift in Sources */,
+				B7E935782AED5B61003579B9 /* HuacaBravaDataModel.xcdatamodeld in Sources */,
 				B7350C8E2AB773E100C33F7D /* AppDelegate.swift in Sources */,
 				B76772632AC881BF0024A694 /* CartaTableViewCell.swift in Sources */,
 				B76F6FE22AE03E320036D73C /* CartaAlt.swift in Sources */,
 				B7FD320A2AC866A700104E81 /* AdminBebidaTableViewCell.swift in Sources */,
+				B7E935822AED7755003579B9 /* CarritoTableViewCell.swift in Sources */,
 				B7350C902AB773E100C33F7D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -524,6 +568,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		B7E935762AED5B61003579B9 /* HuacaBravaDataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				B7E935772AED5B61003579B9 /* HuacaBravaDataModel.xcdatamodel */,
+			);
+			currentVersion = B7E935772AED5B61003579B9 /* HuacaBravaDataModel.xcdatamodel */;
+			path = HuacaBravaDataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = B7350C822AB773E100C33F7D /* Project object */;
 }

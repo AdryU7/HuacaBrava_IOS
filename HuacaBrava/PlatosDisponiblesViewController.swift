@@ -1,0 +1,68 @@
+//
+//  PlatosDisponiblesViewController.swift
+//  HuacaBrava
+//
+//  Created by DAMII on 28/10/23.
+//
+
+import UIKit
+import CoreData
+
+class PlatosDisponiblesViewController: UIViewController, UITableViewDataSource {
+    var platoList: [Plato] = []
+    
+    @IBOutlet weak var platosTableView: UITableView!
+    
+    var carritoItems: [CarritoEntity] = []
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        platosTableView.dataSource = self
+        
+        platoList.append(Plato(nombre: "Pollo a la parrilla", stock: "13", precio: "S/ 29.90", foto: "pollo_a_la_parrilla"))
+        platoList.append(Plato(nombre: "Pollo a la brasa", stock: "18", precio: "S/ 32.50", foto: "pollo_a_la_brasa"))
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return platoList.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "itemPlato", for: indexPath) as! PlatoTableViewCell
+        
+        let plato = platoList[indexPath.row]
+        
+        cell.nombreLabel.text = plato.nombre
+        cell.precioLabel.text = plato.precio
+        cell.stockLabel.text = plato.stock
+        cell.fotoImageView.image = UIImage(named: plato.foto)
+        
+        // Agregar un botón para agregar al carrito en tu celda y conectarlo a un método
+        cell.agregarAlCarritoButton.addTarget(self, action: #selector(agregarCarritoButton(_:)), for: .touchUpInside)
+        cell.agregarAlCarritoButton.tag = indexPath.row
+        return cell
+    }
+    
+    @IBAction func agregarCarritoButton(_ sender: UIButton) {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let contextCoreData = appDelegate.persistentContainer.viewContext
+        let selectedPlato = platoList[sender.tag]
+        
+        // Crear un objeto CarritoItem y configurar sus atributos con los datos seleccionados
+        let carritoItem = CarritoEntity(context: contextCoreData)
+        carritoItem.nombre = selectedPlato.nombre
+        carritoItem.precio = selectedPlato.precio
+        carritoItem.stock = selectedPlato.stock
+        carritoItem.foto = selectedPlato.foto
+        carritoItem.cantidad = 1
+        
+        carritoItems.append(carritoItem)
+        
+        do {
+            try contextCoreData.save()
+        } catch let error as NSError {
+            print("Error al guardar en el carrito")
+        }
+    }
+    
+}

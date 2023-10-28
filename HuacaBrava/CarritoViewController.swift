@@ -6,24 +6,48 @@
 //
 
 import UIKit
+import CoreData
 
-class CarritoViewController: UIViewController {
-
+class CarritoViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    var carritoList: [CarritoEntity] = []
+    
+    @IBOutlet weak var carritoTableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        carritoTableView.dataSource = self
+        carritoTableView.delegate = self
+        listarCoreData()
+    }
 
-        // Do any additional setup after loading the view.
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return carritoList.count
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "itemCarrito", for: indexPath) as! CarritoTableViewCell
+        let carrito = carritoList[indexPath.row]
+        cell.nombreCarritoLabel.text = carrito.nombre
+        cell.fotoCarritoImageView.image = UIImage(named: carrito.foto!)
+        cell.precioCarritoLabel.text = carrito.precio
+        cell.stockCarritoLabel.text = carrito.stock
+        return cell
     }
-    */
+}
 
+extension CarritoViewController {
+    func listarCoreData() {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let contextCoreData = appDelegate.persistentContainer.viewContext
+        
+        let entity = CarritoEntity(context: contextCoreData)
+        
+        do {
+            let result = try contextCoreData.fetch(CarritoEntity.fetchRequest())
+            carritoList = result
+        } catch let error as NSError {
+            print("Se presento un error")
+        }
+        carritoTableView.reloadData()
+    }
 }
