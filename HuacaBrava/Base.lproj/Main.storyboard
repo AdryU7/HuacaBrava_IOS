@@ -1673,7 +1673,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="khS-xw-AHR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3326" y="2979"/>
+            <point key="canvasLocation" x="3326" y="2250"/>
         </scene>
         <!--Monto View Controller-->
         <scene sceneID="ZbF-Vo-AA4">
@@ -1737,6 +1737,7 @@
                                         <connections>
                                             <outlet property="descripcionLabel" destination="1Z6-rO-Nf8" id="zfZ-NG-8W5"/>
                                             <outlet property="tituloLabel" destination="vkQ-eQ-Het" id="rVi-Nv-d5u"/>
+                                            <segue destination="NaZ-SX-1qj" kind="show" identifier="showDetail" id="E7N-VB-zUZ"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -2072,27 +2073,9 @@
             </objects>
             <point key="canvasLocation" x="-404" y="-16"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="Mfj-Bg-sgr">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="tbO-3R-a6Y" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ra5-jJ-ssn">
-                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="NaZ-SX-1qj" kind="relationship" relationship="rootViewController" id="OjR-5E-JC6"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="NUO-UF-nCG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3326" y="2250"/>
-        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="M3z-JQ-YX0"/>
+        <segue reference="GCR-YI-h5f"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="brasa_fondo" width="866" height="1297"/>

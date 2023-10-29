@@ -33,6 +33,10 @@ class CarritoViewController: UIViewController, UITableViewDataSource, UITableVie
         cell.stockCarritoLabel.text = carrito.stock
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 132
+    }
 }
 
 extension CarritoViewController {
