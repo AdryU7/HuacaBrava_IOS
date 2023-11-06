@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 
 class LoginAltViewController: UIViewController {
 
@@ -19,6 +20,14 @@ class LoginAltViewController: UIViewController {
         // Configura el radio de las esquinas del UIView
         miView.layer.cornerRadius = 10 // Ajusta el valor según tus preferencias
         miView.layer.masksToBounds = true
+        
+        if verifyLogin() {
+            goToMenu()
+        }
+    }
+    
+    func verifyLogin() -> Bool {
+        return UserDefaults.standard.bool(forKey: "login_status")
     }
     
     @IBAction func inicioSesionButton(_ sender: Any) {
@@ -30,7 +39,7 @@ class LoginAltViewController: UIViewController {
             } else if pass.isEmpty{
                 showAlert(mensaje: "Ingrese clave")
             }else{
-                goToMenu()
+                self.loginFirebase(email: email, password: pass)
             }
         }else{
             showAlert(mensaje: "NADA")
@@ -39,8 +48,7 @@ class LoginAltViewController: UIViewController {
     
     func goToMenu(){
         let storyBoard:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let viewScreen = storyBoard.instantiateViewController(withIdentifier: "TabBarMenu") as!
-        MenuViewController
+        let viewScreen = storyBoard.instantiateViewController(withIdentifier: "TabBarMenu") as! MenuViewController
         viewScreen.modalPresentationStyle = .fullScreen
         self.present(viewScreen, animated: true, completion: nil)
     }
@@ -51,4 +59,26 @@ class LoginAltViewController: UIViewController {
         self.present(alert, animated: true)
     }
     
+}
+
+// Firebase
+extension LoginAltViewController {
+    func loginFirebase(email: String, password: String) {
+        Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
+            if let user = result {
+                let uid = user.user.uid
+                self.saveSuccessfulLogin()
+                self.goToMenu()
+            } else {
+                self.showAlert(mensaje: "Se presento un error")
+            }
+        }
+    }
+}
+
+extension LoginAltViewController {
+    func saveSuccessfulLogin() {
+        let defaults = UserDefaults.standard
+        defaults.set(true, forKey: "login_status")
+    }
 }
