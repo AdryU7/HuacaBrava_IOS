@@ -36,15 +36,29 @@ class CartaAltViewController: UIViewController, UITableViewDataSource, UITableVi
         return cell
     }
     // DELEGATE
+    var isDetailViewControllerPresented = false
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        /*guard !isDetailViewControllerPresented else {
+            return
+        }
+        
+        isDetailViewControllerPresented = true
+        
         let selectedCard = cartas[indexPath.row]
-        performSegue(withIdentifier: "showDetail", sender: selectedCard)
+        performSegue(withIdentifier: "showDetail", sender: selectedCard)*/
+        let selectedCard = cartas[indexPath.row]
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        if let cartaDetalleViewController = storyboard.instantiateViewController(withIdentifier: "CartaDetalleViewController") as? CartaDetalleViewController {
+            cartaDetalleViewController.carta = selectedCard
+            self.present(cartaDetalleViewController, animated: true, completion: nil)
+        }
     }
         
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    /*override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showDetail", let selectedCard = sender as? CartaAlt, let cartaDetalleViewController = segue.destination as? CartaDetalleViewController
         {
             cartaDetalleViewController.carta = selectedCard
         }
-    }
+    }*/
 }

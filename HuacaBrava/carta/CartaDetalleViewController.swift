@@ -22,5 +22,10 @@ class CartaDetalleViewController: UIViewController {
             descripcionLabel.text = card.descripcion
         }
     }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        let isDetailViewControllerPresented = false
+    }
 
 }

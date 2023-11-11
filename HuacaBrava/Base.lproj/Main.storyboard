@@ -1664,19 +1664,19 @@
         <!--Detalle de la Carta-->
         <scene sceneID="xtD-jo-EvX">
             <objects>
-                <viewController id="NaZ-SX-1qj" customClass="CartaDetalleViewController" customModule="HuacaBrava" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CartaDetalleViewController" id="NaZ-SX-1qj" customClass="CartaDetalleViewController" customModule="HuacaBrava" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vSy-ef-sDN">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aP0-8B-TJJ">
-                                <rect key="frame" x="0.0" y="103" width="393" height="29"/>
+                                <rect key="frame" x="20" y="89" width="353" height="29"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q0h-8G-GHc">
-                                <rect key="frame" x="20" y="142" width="353" height="21"/>
+                                <rect key="frame" x="20" y="128" width="353" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -1685,11 +1685,11 @@
                         <viewLayoutGuide key="safeArea" id="xwG-Jh-Dhb"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="aP0-8B-TJJ" firstAttribute="leading" secondItem="xwG-Jh-Dhb" secondAttribute="leading" id="4RV-Qx-ehm"/>
-                            <constraint firstItem="aP0-8B-TJJ" firstAttribute="top" secondItem="xwG-Jh-Dhb" secondAttribute="top" id="4Ud-fO-oqY"/>
+                            <constraint firstItem="aP0-8B-TJJ" firstAttribute="leading" secondItem="xwG-Jh-Dhb" secondAttribute="leading" constant="20" id="4RV-Qx-ehm"/>
+                            <constraint firstItem="aP0-8B-TJJ" firstAttribute="top" secondItem="xwG-Jh-Dhb" secondAttribute="top" constant="30" id="4Ud-fO-oqY"/>
                             <constraint firstItem="q0h-8G-GHc" firstAttribute="leading" secondItem="xwG-Jh-Dhb" secondAttribute="leading" constant="20" id="68e-KZ-u3y"/>
                             <constraint firstItem="xwG-Jh-Dhb" firstAttribute="trailing" secondItem="q0h-8G-GHc" secondAttribute="trailing" constant="20" id="Oh5-SJ-el6"/>
-                            <constraint firstItem="xwG-Jh-Dhb" firstAttribute="trailing" secondItem="aP0-8B-TJJ" secondAttribute="trailing" id="QgO-4P-HdS"/>
+                            <constraint firstItem="xwG-Jh-Dhb" firstAttribute="trailing" secondItem="aP0-8B-TJJ" secondAttribute="trailing" constant="20" id="QgO-4P-HdS"/>
                             <constraint firstItem="q0h-8G-GHc" firstAttribute="top" secondItem="aP0-8B-TJJ" secondAttribute="bottom" constant="10" id="bbf-aa-ugz"/>
                         </constraints>
                     </view>
@@ -1703,7 +1703,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="khS-xw-AHR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3326" y="2250"/>
+            <point key="canvasLocation" x="3422" y="2250"/>
         </scene>
         <!--Monto View Controller-->
         <scene sceneID="ZbF-Vo-AA4">
@@ -1767,7 +1767,6 @@
                                         <connections>
                                             <outlet property="descripcionLabel" destination="1Z6-rO-Nf8" id="zfZ-NG-8W5"/>
                                             <outlet property="tituloLabel" destination="vkQ-eQ-Het" id="rVi-Nv-d5u"/>
-                                            <segue destination="NaZ-SX-1qj" kind="show" identifier="showDetail" id="E7N-VB-zUZ"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -1988,7 +1987,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bA7-DV-n99" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1525.9541984732823" y="2243.6619718309862"/>
+            <point key="canvasLocation" x="1526" y="2220"/>
         </scene>
         <!--Bebidas-->
         <scene sceneID="Nfs-0U-vpq">
@@ -2105,7 +2104,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="W4E-Jj-hVQ"/>
+        <segue reference="M3z-JQ-YX0"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="brasa_fondo" width="866" height="1297"/>
