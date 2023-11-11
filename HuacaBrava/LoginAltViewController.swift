@@ -34,7 +34,9 @@ class LoginAltViewController: UIViewController {
         let correo = emailTextField.text
         let clave = passwordTextField.text
         if let email = correo, let pass = clave{
-            if email.isEmpty{
+            if email.isEmpty, pass.isEmpty {
+                showAlert(mensaje: "Debe ingresar sus credenciales")
+            } else if email.isEmpty{
                 showAlert(mensaje: "Ingrese correo")
             } else if pass.isEmpty{
                 showAlert(mensaje: "Ingrese clave")
@@ -70,7 +72,7 @@ extension LoginAltViewController {
                 self.saveSuccessfulLogin()
                 self.goToMenu()
             } else {
-                self.showAlert(mensaje: "Se presento un error")
+                self.showAlert(mensaje: "Email y/o password invalidos, por favor vuelva a ingresar sus credenciales correctamente")
             }
         }
     }
