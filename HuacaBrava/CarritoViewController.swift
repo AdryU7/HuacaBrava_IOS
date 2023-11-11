@@ -61,13 +61,11 @@ extension CarritoViewController {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let contextCoreData = appDelegate.persistentContainer.viewContext
         
-        let entity = CarritoEntity(context: contextCoreData)
-        
         do {
-            let result = try contextCoreData.fetch(CarritoEntity.fetchRequest())
+            let result = try contextCoreData.fetch(CarritoEntity.fetchRequest()) as! [CarritoEntity]
             carritoList = result
         } catch let error as NSError {
-            print("Se presento un error")
+            print("Se presentó un error al recuperar datos: \(error.localizedDescription)")
         }
         carritoTableView.reloadData()
     }
@@ -80,7 +78,7 @@ extension CarritoViewController {
         do {
             try contextCoreData.save()
         } catch let error as NSError {
-            print("Se presento un error")
+            print("Se presento un error: \(error)")
         }
         carritoTableView.reloadData()
     }

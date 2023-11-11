@@ -48,23 +48,33 @@ class PlatosDisponiblesViewController: UIViewController, UITableViewDataSource {
         let contextCoreData = appDelegate.persistentContainer.viewContext
         let selectedPlato = platoList[sender.tag]
         
-        // Crear un objeto CarritoItem y configurar sus atributos con los datos seleccionados
-        let carritoItem = CarritoEntity(context: contextCoreData)
-        carritoItem.nombre = selectedPlato.nombre
-        carritoItem.precio = selectedPlato.precio
-        carritoItem.stock = selectedPlato.stock
-        carritoItem.foto = selectedPlato.foto
-        carritoItem.cantidad = 1
-        
-        print(carritoItems.append(carritoItem))
-        
-        do {
-            try contextCoreData.save()
-        } catch let error as NSError {
-            print("Error al guardar en el carrito")
+        // Verificar si el plato ya está en el carrito
+        if !carritoItems.contains(where: { $0.nombre == selectedPlato.nombre }) {
+            // Crear un objeto CarritoItem y configurar sus atributos con los datos seleccionados
+            let carritoItem = CarritoEntity(context: contextCoreData)
+            carritoItem.nombre = selectedPlato.nombre
+            carritoItem.precio = selectedPlato.precio
+            carritoItem.stock = selectedPlato.stock
+            carritoItem.foto = selectedPlato.foto
+            carritoItem.cantidad = 1
+            
+            print(carritoItems.append(carritoItem))
+            
+            do {
+                try contextCoreData.save()
+                showAlert(mensaje: "Cambios aplicados")
+            } catch let error as NSError {
+                print("Error al guardar en el carrito")
+            }
+        } else {
+            showAlert(mensaje: "Este plato ya está en el carrito")
         }
         
-        showAlert(mensaje: "Cambios aplicados")
+        
+        /* // Actualizar la vista del carrito después de agregar un elemento
+        if let carritoViewController = self.tabBarController?.viewControllers?[1] as? CarritoViewController {
+            carritoViewController.listCoreData()
+        }*/
     }
     
     func showAlert(mensaje : String){
