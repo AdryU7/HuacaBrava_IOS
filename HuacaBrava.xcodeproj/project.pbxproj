@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AAB270D62AF921BB00CCF736 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AAB270D52AF921BB00CCF736 /* GoogleService-Info.plist */; };
 		AAB270D92AF922E800CCF736 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = AAB270D82AF922E800CCF736 /* FirebaseAnalytics */; };
 		AAB270DB2AF922E800CCF736 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = AAB270DA2AF922E800CCF736 /* FirebaseAuth */; };
 		AAB270DD2AF922E800CCF736 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = AAB270DC2AF922E800CCF736 /* FirebaseFirestore */; };
@@ -41,6 +40,7 @@
 		B76F6FEC2AE049E40036D73C /* UbicacionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76F6FEB2AE049E40036D73C /* UbicacionViewController.swift */; };
 		B77A6BF92ABF46FA009D55B6 /* AdminLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77A6BF82ABF46FA009D55B6 /* AdminLoginViewController.swift */; };
 		B77A6BFD2ABF4C32009D55B6 /* AdminViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77A6BFC2ABF4C32009D55B6 /* AdminViewController.swift */; };
+		B7AFB2D62AFFC5740028A1A8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B7AFB2D52AFFC5740028A1A8 /* GoogleService-Info.plist */; };
 		B7C5363F2AD716CC0083609C /* LoginAltViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C5363E2AD716CC0083609C /* LoginAltViewController.swift */; };
 		B7D41D162AE9929200DA7757 /* InicioCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D41D152AE9929200DA7757 /* InicioCollectionViewCell.swift */; };
 		B7D8199C2ADB034400D019B9 /* CreditosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D8199B2ADB034400D019B9 /* CreditosViewController.swift */; };
@@ -58,7 +58,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		AAB270D52AF921BB00CCF736 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		AAB270E22AF932F800CCF736 /* OpcionesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpcionesViewController.swift; sourceTree = "<group>"; };
 		B70D145C2ABB5FA5001F4014 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		B70D145E2ABB663D001F4014 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
@@ -89,6 +88,7 @@
 		B76F6FEB2AE049E40036D73C /* UbicacionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UbicacionViewController.swift; sourceTree = "<group>"; };
 		B77A6BF82ABF46FA009D55B6 /* AdminLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminLoginViewController.swift; sourceTree = "<group>"; };
 		B77A6BFC2ABF4C32009D55B6 /* AdminViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminViewController.swift; sourceTree = "<group>"; };
+		B7AFB2D52AFFC5740028A1A8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B7C5363E2AD716CC0083609C /* LoginAltViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAltViewController.swift; sourceTree = "<group>"; };
 		B7D41D152AE9929200DA7757 /* InicioCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InicioCollectionViewCell.swift; sourceTree = "<group>"; };
 		B7D8199B2ADB034400D019B9 /* CreditosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditosViewController.swift; sourceTree = "<group>"; };
@@ -152,7 +152,7 @@
 				B7350C962AB773E200C33F7D /* Assets.xcassets */,
 				B7350C982AB773E200C33F7D /* LaunchScreen.storyboard */,
 				B7350C9B2AB773E200C33F7D /* Info.plist */,
-				AAB270D52AF921BB00CCF736 /* GoogleService-Info.plist */,
+				B7AFB2D52AFFC5740028A1A8 /* GoogleService-Info.plist */,
 				B70D145C2ABB5FA5001F4014 /* LoginViewController.swift */,
 				B70D145E2ABB663D001F4014 /* MenuViewController.swift */,
 				B7DDCDA42AD1A4B80029242D /* RegisterViewController.swift */,
@@ -329,7 +329,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B7350C9A2AB773E200C33F7D /* LaunchScreen.storyboard in Resources */,
-				AAB270D62AF921BB00CCF736 /* GoogleService-Info.plist in Resources */,
+				B7AFB2D62AFFC5740028A1A8 /* GoogleService-Info.plist in Resources */,
 				B7350C972AB773E200C33F7D /* Assets.xcassets in Resources */,
 				B7350C952AB773E100C33F7D /* Main.storyboard in Resources */,
 			);

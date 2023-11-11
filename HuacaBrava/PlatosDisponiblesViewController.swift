@@ -56,7 +56,7 @@ class PlatosDisponiblesViewController: UIViewController, UITableViewDataSource {
         carritoItem.foto = selectedPlato.foto
         carritoItem.cantidad = 1
         
-        carritoItems.append(carritoItem)
+        print(carritoItems.append(carritoItem))
         
         do {
             try contextCoreData.save()

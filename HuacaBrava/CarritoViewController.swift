@@ -17,7 +17,7 @@ class CarritoViewController: UIViewController, UITableViewDataSource, UITableVie
         super.viewDidLoad()
         carritoTableView.dataSource = self
         carritoTableView.delegate = self
-        listarCoreData()
+        listCoreData()
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -37,10 +37,27 @@ class CarritoViewController: UIViewController, UITableViewDataSource, UITableVie
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 132
     }
+    
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let deleteAction = UIContextualAction(style: .destructive,
+                                              title: "Eliminar",
+                                              handler: { _,_, complete in
+            let item = self.carritoList[indexPath.row]
+            self.deleteCoreData(carrito: item)
+            self.carritoList.remove(at: indexPath.row)
+            self.carritoTableView.deleteRows(at: [indexPath], with: .automatic)
+            complete(true)
+        })
+        deleteAction.backgroundColor = .red
+        
+        let configuration = UISwipeActionsConfiguration(actions: [deleteAction])
+        configuration.performsFirstActionWithFullSwipe = true
+        return configuration
+    }
 }
 
 extension CarritoViewController {
-    func listarCoreData() {
+    func listCoreData() {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let contextCoreData = appDelegate.persistentContainer.viewContext
         
@@ -49,6 +66,19 @@ extension CarritoViewController {
         do {
             let result = try contextCoreData.fetch(CarritoEntity.fetchRequest())
             carritoList = result
+        } catch let error as NSError {
+            print("Se presento un error")
+        }
+        carritoTableView.reloadData()
+    }
+    
+    func deleteCoreData(carrito: CarritoEntity) {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let contextCoreData = appDelegate.persistentContainer.viewContext
+        
+        contextCoreData.delete(carrito)
+        do {
+            try contextCoreData.save()
         } catch let error as NSError {
             print("Se presento un error")
         }
