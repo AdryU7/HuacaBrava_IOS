@@ -11,6 +11,7 @@ import Firebase
 class OpcionesViewController: UIViewController {
 
     @IBOutlet weak var nombreApellidoLabel: UILabel!
+    @IBOutlet weak var emailLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,7 +19,7 @@ class OpcionesViewController: UIViewController {
         let apellidos = UserDefaults.standard.string(forKey: "login_apellidos")
         let email = UserDefaults.standard.string(forKey: "login_email")
         nombreApellidoLabel.text = "\(nombres ?? "") \(apellidos ?? "")"
-        
+        emailLabel.text = email ?? ""
     }
     
     @IBAction func logOut(_ sender: Any) {

@@ -1008,7 +1008,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3sD-xj-g1v">
-                                <rect key="frame" x="125" y="310" width="143" height="34.333333333333314"/>
+                                <rect key="frame" x="125" y="330.33333333333331" width="143" height="34.333333333333314"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Cerrar sesion">
                                     <color key="baseBackgroundColor" systemColor="systemRedColor"/>
@@ -1035,16 +1035,30 @@
                                     </label>
                                 </subviews>
                             </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="NH4-WS-tET">
+                                <rect key="frame" x="20" y="290" width="353" height="20.333333333333314"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dUy-PI-CkR">
+                                        <rect key="frame" x="0.0" y="0.0" width="353" height="20.333333333333332"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="AIV-rX-Bei"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="3sD-xj-g1v" firstAttribute="top" secondItem="NH4-WS-tET" secondAttribute="bottom" constant="20" id="29p-bV-0MD"/>
+                            <constraint firstItem="NH4-WS-tET" firstAttribute="leading" secondItem="AIV-rX-Bei" secondAttribute="leading" constant="20" id="8dA-Yg-d0t"/>
                             <constraint firstItem="4HL-eQ-5Uo" firstAttribute="centerY" secondItem="Yt6-CW-hoO" secondAttribute="centerY" constant="-250" id="9w7-ht-jZl"/>
+                            <constraint firstItem="AIV-rX-Bei" firstAttribute="trailing" secondItem="NH4-WS-tET" secondAttribute="trailing" constant="20" id="BHp-fX-we6"/>
+                            <constraint firstItem="NH4-WS-tET" firstAttribute="top" secondItem="FYa-65-tH0" secondAttribute="bottom" constant="10" id="JWy-Us-I4J"/>
+                            <constraint firstItem="3sD-xj-g1v" firstAttribute="leading" secondItem="AIV-rX-Bei" secondAttribute="leading" constant="125" id="VSi-wl-hUr"/>
+                            <constraint firstItem="AIV-rX-Bei" firstAttribute="trailing" secondItem="3sD-xj-g1v" secondAttribute="trailing" constant="125" id="WKK-LI-3qx"/>
                             <constraint firstItem="AIV-rX-Bei" firstAttribute="trailing" secondItem="FYa-65-tH0" secondAttribute="trailing" constant="20" id="Ylg-EY-226"/>
-                            <constraint firstItem="3sD-xj-g1v" firstAttribute="top" secondItem="FYa-65-tH0" secondAttribute="bottom" constant="30" id="bAS-pu-zQQ"/>
                             <constraint firstItem="4HL-eQ-5Uo" firstAttribute="centerX" secondItem="Yt6-CW-hoO" secondAttribute="centerX" id="dT5-Dx-lQD"/>
-                            <constraint firstItem="3sD-xj-g1v" firstAttribute="leading" secondItem="AIV-rX-Bei" secondAttribute="leading" constant="125" id="dWO-cA-N2Z"/>
-                            <constraint firstItem="AIV-rX-Bei" firstAttribute="trailing" secondItem="3sD-xj-g1v" secondAttribute="trailing" constant="125" id="gnn-5s-Bg2"/>
                             <constraint firstItem="FYa-65-tH0" firstAttribute="top" secondItem="4HL-eQ-5Uo" secondAttribute="bottom" constant="20" id="iJS-Ri-Edo"/>
                             <constraint firstItem="FYa-65-tH0" firstAttribute="leading" secondItem="AIV-rX-Bei" secondAttribute="leading" constant="20" id="m6H-96-0P9"/>
                         </constraints>
@@ -1057,6 +1071,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="emailLabel" destination="dUy-PI-CkR" id="H5T-z1-m5J"/>
                         <outlet property="nombreApellidoLabel" destination="6gz-GL-czt" id="83r-Ln-edP"/>
                     </connections>
                 </viewController>
@@ -2090,7 +2105,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="rbH-0c-Nx0"/>
+        <segue reference="B1e-Vh-xv9"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="brasa_fondo" width="866" height="1297"/>
