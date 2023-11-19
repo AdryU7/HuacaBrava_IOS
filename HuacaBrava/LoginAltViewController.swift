@@ -69,18 +69,35 @@ extension LoginAltViewController {
         Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
             if let user = result {
                 let uid = user.user.uid
-                self.saveSuccessfulLogin()
-                self.goToMenu()
+                self.getAccountInfo(uid: uid)
             } else {
                 self.showAlert(mensaje: "Email y/o password invalidos, por favor vuelva a ingresar sus credenciales correctamente")
             }
         }
     }
+    func getAccountInfo(uid: String) {
+        let db = Firestore.firestore()
+        let docRef = db.collection("users").document(uid)
+        docRef.getDocument(completion: { (document, error) in
+            if let d = document, d.exists {
+                let data = d.data()
+                let email = data?["email"] as? String ?? ""
+                let nombres = data?["nombres"] as? String ?? ""
+                let apellidos = data?["apellidos"] as? String ?? ""
+                
+                self.saveSuccessfulLogin(nombres: nombres, apellidos: apellidos, email: email)
+                self.goToMenu()
+            }
+        })
+    }
 }
 
 extension LoginAltViewController {
-    func saveSuccessfulLogin() {
+    func saveSuccessfulLogin(nombres: String, apellidos: String, email: String) {
         let defaults = UserDefaults.standard
+        defaults.set(nombres, forKey: "login_nombres")
+        defaults.set(apellidos, forKey: "login_apellidos")
+        defaults.set(email, forKey: "login_email")
         defaults.set(true, forKey: "login_status")
     }
 }

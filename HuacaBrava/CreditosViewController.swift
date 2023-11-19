@@ -11,7 +11,6 @@ class CreditosViewController: UIViewController {
 
     @IBOutlet weak var balanceView: UIView!
     @IBOutlet weak var historialMovimientosView: UIView!
-    @IBOutlet weak var cuponesView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,8 +20,5 @@ class CreditosViewController: UIViewController {
         
         historialMovimientosView.layer.cornerRadius = 10
         historialMovimientosView.layer.masksToBounds = true
-        
-        cuponesView.layer.cornerRadius = 10
-        cuponesView.layer.masksToBounds = true
     }
 }
