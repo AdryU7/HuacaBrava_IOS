@@ -23,10 +23,20 @@ class OpcionesViewController: UIViewController {
     }
     
     @IBAction func logOut(_ sender: Any) {
-        let domain = Bundle.main.bundleIdentifier!
-        UserDefaults.standard.removePersistentDomain(forName: domain)
-        UserDefaults.standard.synchronize()
-        self.goToLogin()
+        self.openAlertLogout()
+    }
+    
+    func openAlertLogout() {
+        let alert = UIAlertController(title: "Aviso", message: "¿Está seguro que desea cerrar sesión?", preferredStyle: .alert)
+        let action = UIAlertAction(title: "Sí, cerrar sesión", style: .destructive) { action in
+            let domain = Bundle.main.bundleIdentifier!
+            UserDefaults.standard.removePersistentDomain(forName: domain)
+            UserDefaults.standard.synchronize()
+            self.goToLogin()
+        }
+        alert.addAction(action)
+        alert.addAction(UIAlertAction(title: "No, cancelar", style: .cancel))
+        present(alert, animated: true)
     }
     
     func goToLogin() {

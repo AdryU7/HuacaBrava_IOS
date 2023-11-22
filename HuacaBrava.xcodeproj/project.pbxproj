@@ -41,6 +41,8 @@
 		B77A6BF92ABF46FA009D55B6 /* AdminLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77A6BF82ABF46FA009D55B6 /* AdminLoginViewController.swift */; };
 		B77A6BFD2ABF4C32009D55B6 /* AdminViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77A6BFC2ABF4C32009D55B6 /* AdminViewController.swift */; };
 		B7AFB2D62AFFC5740028A1A8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B7AFB2D52AFFC5740028A1A8 /* GoogleService-Info.plist */; };
+		B7C304202B0E77B4008E0742 /* BuscarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C3041F2B0E77B4008E0742 /* BuscarViewController.swift */; };
+		B7C304232B0E7830008E0742 /* ProductoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C304222B0E7830008E0742 /* ProductoTableViewCell.swift */; };
 		B7C5363F2AD716CC0083609C /* LoginAltViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C5363E2AD716CC0083609C /* LoginAltViewController.swift */; };
 		B7D41D162AE9929200DA7757 /* InicioCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D41D152AE9929200DA7757 /* InicioCollectionViewCell.swift */; };
 		B7D8199C2ADB034400D019B9 /* CreditosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D8199B2ADB034400D019B9 /* CreditosViewController.swift */; };
@@ -89,6 +91,8 @@
 		B77A6BF82ABF46FA009D55B6 /* AdminLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminLoginViewController.swift; sourceTree = "<group>"; };
 		B77A6BFC2ABF4C32009D55B6 /* AdminViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminViewController.swift; sourceTree = "<group>"; };
 		B7AFB2D52AFFC5740028A1A8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		B7C3041F2B0E77B4008E0742 /* BuscarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuscarViewController.swift; sourceTree = "<group>"; };
+		B7C304222B0E7830008E0742 /* ProductoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductoTableViewCell.swift; sourceTree = "<group>"; };
 		B7C5363E2AD716CC0083609C /* LoginAltViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAltViewController.swift; sourceTree = "<group>"; };
 		B7D41D152AE9929200DA7757 /* InicioCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InicioCollectionViewCell.swift; sourceTree = "<group>"; };
 		B7D8199B2ADB034400D019B9 /* CreditosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditosViewController.swift; sourceTree = "<group>"; };
@@ -140,6 +144,7 @@
 		B7350C8C2AB773E100C33F7D /* HuacaBrava */ = {
 			isa = PBXGroup;
 			children = (
+				B7C304212B0E7810008E0742 /* producto */,
 				B7E9357B2AED66FA003579B9 /* cliente */,
 				B7E935752AED5ADE003579B9 /* carrito */,
 				B7D41D142AE9922400DA7757 /* inicio */,
@@ -166,6 +171,7 @@
 				B7E935762AED5B61003579B9 /* HuacaBravaDataModel.xcdatamodeld */,
 				B7E935792AED63C4003579B9 /* PlatosDisponiblesViewController.swift */,
 				AAB270E22AF932F800CCF736 /* OpcionesViewController.swift */,
+				B7C3041F2B0E77B4008E0742 /* BuscarViewController.swift */,
 			);
 			path = HuacaBrava;
 			sourceTree = "<group>";
@@ -215,6 +221,14 @@
 				B76F6FE52AE040F50036D73C /* CartaDetalleViewController.swift */,
 			);
 			path = carta;
+			sourceTree = "<group>";
+		};
+		B7C304212B0E7810008E0742 /* producto */ = {
+			isa = PBXGroup;
+			children = (
+				B7C304222B0E7830008E0742 /* ProductoTableViewCell.swift */,
+			);
+			path = producto;
 			sourceTree = "<group>";
 		};
 		B7D41D142AE9922400DA7757 /* inicio */ = {
@@ -352,6 +366,7 @@
 				B70D145D2ABB5FA5001F4014 /* LoginViewController.swift in Sources */,
 				B7E7D8BB2AD7208E0050D737 /* CarritoViewController.swift in Sources */,
 				B76F6FE82AE0469D0036D73C /* MontoViewController.swift in Sources */,
+				B7C304232B0E7830008E0742 /* ProductoTableViewCell.swift in Sources */,
 				B7446D9F2AC4A565001D80B3 /* AdminEmpleado.swift in Sources */,
 				B7DDCDA72AD1AA5A0029242D /* CartaSecondViewController.swift in Sources */,
 				B7446D992AC49344001D80B3 /* AdminPlato.swift in Sources */,
@@ -362,6 +377,7 @@
 				B76F6FE62AE040F50036D73C /* CartaDetalleViewController.swift in Sources */,
 				B76F6FE42AE040210036D73C /* CartaAltTableViewCell.swift in Sources */,
 				B7446D9D2AC4A385001D80B3 /* AdminEmpleadoTableViewCell.swift in Sources */,
+				B7C304202B0E77B4008E0742 /* BuscarViewController.swift in Sources */,
 				B7E9357E2AED6727003579B9 /* Plato.swift in Sources */,
 				B76F6FE02AE038D80036D73C /* CartaAltViewController.swift in Sources */,
 				B77A6BFD2ABF4C32009D55B6 /* AdminViewController.swift in Sources */,

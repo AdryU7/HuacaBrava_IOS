@@ -263,15 +263,21 @@
                                 </prototypes>
                             </tableView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="bDT-hj-zbW">
-                                <rect key="frame" x="20" y="755" width="353" height="34.333333333333371"/>
+                                <rect key="frame" x="250" y="755" width="123" height="34.333333333333371"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ljc-eL-Bpg">
-                                        <rect key="frame" x="0.0" y="0.0" width="353" height="34.333333333333336"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="123" height="34.333333333333336"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Continuar"/>
                                     </button>
                                 </subviews>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SWG-Cv-nKt">
+                                <rect key="frame" x="20" y="755" width="222" height="28.666666666666629"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="12T-H0-p9k"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -279,10 +285,13 @@
                             <constraint firstItem="12T-H0-p9k" firstAttribute="trailing" secondItem="0Ej-Ff-1y3" secondAttribute="trailing" id="747-VN-N3b"/>
                             <constraint firstItem="0Ej-Ff-1y3" firstAttribute="leading" secondItem="12T-H0-p9k" secondAttribute="leading" id="9eo-Di-e1x"/>
                             <constraint firstItem="bDT-hj-zbW" firstAttribute="top" secondItem="0Ej-Ff-1y3" secondAttribute="bottom" constant="20" id="Cou-rb-Jw4"/>
+                            <constraint firstItem="SWG-Cv-nKt" firstAttribute="leading" secondItem="12T-H0-p9k" secondAttribute="leading" constant="20" id="HAX-R1-BGM"/>
+                            <constraint firstItem="SWG-Cv-nKt" firstAttribute="top" secondItem="0Ej-Ff-1y3" secondAttribute="bottom" constant="20" id="NeT-LR-Frl"/>
                             <constraint firstItem="dF4-4v-tAk" firstAttribute="top" secondItem="12T-H0-p9k" secondAttribute="top" constant="30" id="Ri2-hP-56D"/>
-                            <constraint firstItem="bDT-hj-zbW" firstAttribute="leading" secondItem="12T-H0-p9k" secondAttribute="leading" constant="20" id="ShO-SH-4bU"/>
+                            <constraint firstItem="bDT-hj-zbW" firstAttribute="leading" secondItem="12T-H0-p9k" secondAttribute="leading" constant="250" id="ShO-SH-4bU"/>
                             <constraint firstItem="12T-H0-p9k" firstAttribute="bottom" secondItem="0Ej-Ff-1y3" secondAttribute="bottom" constant="107" id="VBi-cX-2Yn"/>
                             <constraint firstItem="12T-H0-p9k" firstAttribute="trailing" secondItem="dF4-4v-tAk" secondAttribute="trailing" constant="20" id="bD3-tY-xBM"/>
+                            <constraint firstItem="bDT-hj-zbW" firstAttribute="leading" secondItem="SWG-Cv-nKt" secondAttribute="trailing" constant="8" symbolic="YES" id="f4b-Fm-8UR"/>
                             <constraint firstItem="dF4-4v-tAk" firstAttribute="leading" secondItem="12T-H0-p9k" secondAttribute="leading" constant="20" id="g0r-Sh-7kY"/>
                             <constraint firstItem="0Ej-Ff-1y3" firstAttribute="top" secondItem="dF4-4v-tAk" secondAttribute="bottom" id="gZC-eP-jMx"/>
                             <constraint firstItem="12T-H0-p9k" firstAttribute="trailing" secondItem="bDT-hj-zbW" secondAttribute="trailing" constant="20" id="sfq-f3-jbP"/>
@@ -861,6 +870,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="mapaMapView" destination="Fdb-qC-Gdk" id="vcQ-Ka-PjB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="poS-LP-u6t" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1087,13 +1099,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="yAq-Ox-p06">
-                                <rect key="frame" x="0.0" y="103" width="393" height="56"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <outlet property="delegate" destination="f5K-Tn-JfM" id="9cr-9M-f4f"/>
-                                </connections>
-                            </searchBar>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="U2c-Vd-wmw">
                                 <rect key="frame" x="0.0" y="199" width="393" height="200"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -1132,38 +1137,29 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ojo-Ug-Vwr">
-                                <rect key="frame" x="100.66666666666669" y="428.66666666666669" width="192" height="35"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="35" id="TJL-UU-UZ5"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Ver platos disponibles"/>
-                                <connections>
-                                    <segue destination="S1F-tu-q1h" kind="show" id="fje-bp-WyQ"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="dIh-7B-K74"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="yAq-Ox-p06" firstAttribute="trailing" secondItem="dIh-7B-K74" secondAttribute="trailing" id="2zd-A0-NjK"/>
-                            <constraint firstItem="ojo-Ug-Vwr" firstAttribute="centerX" secondItem="MA1-mg-VKs" secondAttribute="centerX" id="3wv-I7-FsT"/>
-                            <constraint firstItem="yAq-Ox-p06" firstAttribute="leading" secondItem="dIh-7B-K74" secondAttribute="leading" id="48y-VH-gvp"/>
-                            <constraint firstItem="yAq-Ox-p06" firstAttribute="top" secondItem="dIh-7B-K74" secondAttribute="top" id="GhY-Kd-vHK"/>
+                            <constraint firstItem="U2c-Vd-wmw" firstAttribute="top" secondItem="dIh-7B-K74" secondAttribute="top" constant="96" id="Gxv-p9-Yhd"/>
                             <constraint firstItem="dIh-7B-K74" firstAttribute="trailing" secondItem="U2c-Vd-wmw" secondAttribute="trailing" id="POh-Fa-gzG"/>
-                            <constraint firstItem="U2c-Vd-wmw" firstAttribute="top" secondItem="yAq-Ox-p06" secondAttribute="bottom" constant="40" id="vq7-bM-VLv"/>
                             <constraint firstItem="U2c-Vd-wmw" firstAttribute="leading" secondItem="dIh-7B-K74" secondAttribute="leading" id="wbN-uQ-stN"/>
-                            <constraint firstItem="ojo-Ug-Vwr" firstAttribute="centerY" secondItem="MA1-mg-VKs" secondAttribute="centerY" constant="20" id="yNA-kS-3mt"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Inicio" id="nB4-he-Mot">
                         <barButtonItem key="backBarButtonItem" title="Atrás" id="H6e-YE-4Ih"/>
-                        <barButtonItem key="rightBarButtonItem" title="Carrito" image="cart.fill" catalog="system" id="ntb-SU-sPD">
-                            <connections>
-                                <segue destination="00h-zG-ZDi" kind="presentation" id="W4E-Jj-hVQ"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem title="Carrito" image="cart.fill" catalog="system" id="ntb-SU-sPD">
+                                <connections>
+                                    <segue destination="00h-zG-ZDi" kind="presentation" id="W4E-Jj-hVQ"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Buscar" image="magnifyingglass" catalog="system" id="c6S-Gg-QWL">
+                                <connections>
+                                    <segue destination="S1F-tu-q1h" kind="show" id="d6v-Bm-Z3o"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <connections>
                         <outlet property="productosCollectionView" destination="U2c-Vd-wmw" id="tS3-hW-aqZ"/>
@@ -1836,7 +1832,7 @@
             </objects>
             <point key="canvasLocation" x="-211" y="5506"/>
         </scene>
-        <!--Platos disponibles-->
+        <!--Buscar-->
         <scene sceneID="9QP-M5-U5i">
             <objects>
                 <viewController id="S1F-tu-q1h" customClass="PlatosDisponiblesViewController" customModule="HuacaBrava" customModuleProvider="target" sceneMemberID="viewController">
@@ -1845,7 +1841,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="sJ6-Nq-FGu">
-                                <rect key="frame" x="0.0" y="103" width="393" height="666"/>
+                                <rect key="frame" x="0.0" y="163" width="393" height="606"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="itemPlato" rowHeight="136" id="NJZ-9k-6H8" customClass="PlatoTableViewCell" customModule="HuacaBrava" customModuleProvider="target">
@@ -1965,17 +1961,27 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="2kN-Wy-9Yx">
+                                <rect key="frame" x="0.0" y="107" width="393" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="S1F-tu-q1h" id="OoH-hX-w0r"/>
+                                </connections>
+                            </searchBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ggy-Mn-XRz"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="sJ6-Nq-FGu" firstAttribute="leading" secondItem="ggy-Mn-XRz" secondAttribute="leading" id="DBm-05-dLb"/>
-                            <constraint firstItem="ggy-Mn-XRz" firstAttribute="bottom" secondItem="sJ6-Nq-FGu" secondAttribute="bottom" id="Jls-sC-C0X"/>
-                            <constraint firstItem="ggy-Mn-XRz" firstAttribute="trailing" secondItem="sJ6-Nq-FGu" secondAttribute="trailing" id="MjJ-tY-gD6"/>
-                            <constraint firstItem="sJ6-Nq-FGu" firstAttribute="top" secondItem="ggy-Mn-XRz" secondAttribute="top" id="wf7-Y6-d1I"/>
+                            <constraint firstItem="sJ6-Nq-FGu" firstAttribute="bottom" secondItem="ggy-Mn-XRz" secondAttribute="bottom" id="iLu-hS-UKn"/>
+                            <constraint firstItem="2kN-Wy-9Yx" firstAttribute="leading" secondItem="sJ6-Nq-FGu" secondAttribute="leading" id="je9-JR-eS7"/>
+                            <constraint firstItem="2kN-Wy-9Yx" firstAttribute="trailing" secondItem="sJ6-Nq-FGu" secondAttribute="trailing" id="krD-1x-FQd"/>
+                            <constraint firstItem="sJ6-Nq-FGu" firstAttribute="trailing" secondItem="ggy-Mn-XRz" secondAttribute="trailing" id="l8a-KR-sfe"/>
+                            <constraint firstItem="sJ6-Nq-FGu" firstAttribute="leading" secondItem="ggy-Mn-XRz" secondAttribute="leading" id="ufc-uN-fZR"/>
+                            <constraint firstItem="sJ6-Nq-FGu" firstAttribute="top" secondItem="ggy-Mn-XRz" secondAttribute="top" constant="60" id="wf7-Y6-d1I"/>
+                            <constraint firstItem="sJ6-Nq-FGu" firstAttribute="top" secondItem="2kN-Wy-9Yx" secondAttribute="bottom" id="wm0-BZ-qLm"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Platos disponibles" id="uzY-TH-cez">
+                    <navigationItem key="navigationItem" title="Buscar" id="uzY-TH-cez">
                         <barButtonItem key="rightBarButtonItem" title="Carrito" image="cart.fill" catalog="system" id="bT8-ez-YC3">
                             <connections>
                                 <segue destination="00h-zG-ZDi" kind="presentation" id="M3z-JQ-YX0"/>
@@ -2105,7 +2111,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="B1e-Vh-xv9"/>
+        <segue reference="W4E-Jj-hVQ"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="brasa_fondo" width="866" height="1297"/>
@@ -2116,6 +2122,7 @@
         <image name="house.fill" catalog="system" width="128" height="104"/>
         <image name="location.circle.fill" catalog="system" width="128" height="123"/>
         <image name="logo" width="225" height="225"/>
+        <image name="magnifyingglass" catalog="system" width="128" height="117"/>
         <image name="monedas_icon" width="100" height="100"/>
         <image name="option" catalog="system" width="128" height="105"/>
         <image name="parrilla_fondo" width="800" height="800"/>
