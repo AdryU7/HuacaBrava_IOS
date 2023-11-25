@@ -40,6 +40,9 @@
 		B76F6FEC2AE049E40036D73C /* UbicacionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76F6FEB2AE049E40036D73C /* UbicacionViewController.swift */; };
 		B77A6BF92ABF46FA009D55B6 /* AdminLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77A6BF82ABF46FA009D55B6 /* AdminLoginViewController.swift */; };
 		B77A6BFD2ABF4C32009D55B6 /* AdminViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77A6BFC2ABF4C32009D55B6 /* AdminViewController.swift */; };
+		B7950E5A2B124DFF0028811F /* ProductoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7950E592B124DFF0028811F /* ProductoViewController.swift */; };
+		B7950E5E2B1253950028811F /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = B7950E5D2B1253950028811F /* Lottie */; };
+		B7950E622B126B5E0028811F /* DetalleProductoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7950E612B126B5E0028811F /* DetalleProductoViewController.swift */; };
 		B7AFB2D62AFFC5740028A1A8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B7AFB2D52AFFC5740028A1A8 /* GoogleService-Info.plist */; };
 		B7C304202B0E77B4008E0742 /* BuscarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C3041F2B0E77B4008E0742 /* BuscarViewController.swift */; };
 		B7C304232B0E7830008E0742 /* ProductoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C304222B0E7830008E0742 /* ProductoTableViewCell.swift */; };
@@ -90,6 +93,8 @@
 		B76F6FEB2AE049E40036D73C /* UbicacionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UbicacionViewController.swift; sourceTree = "<group>"; };
 		B77A6BF82ABF46FA009D55B6 /* AdminLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminLoginViewController.swift; sourceTree = "<group>"; };
 		B77A6BFC2ABF4C32009D55B6 /* AdminViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminViewController.swift; sourceTree = "<group>"; };
+		B7950E592B124DFF0028811F /* ProductoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductoViewController.swift; sourceTree = "<group>"; };
+		B7950E612B126B5E0028811F /* DetalleProductoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalleProductoViewController.swift; sourceTree = "<group>"; };
 		B7AFB2D52AFFC5740028A1A8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B7C3041F2B0E77B4008E0742 /* BuscarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuscarViewController.swift; sourceTree = "<group>"; };
 		B7C304222B0E7830008E0742 /* ProductoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductoTableViewCell.swift; sourceTree = "<group>"; };
@@ -119,6 +124,7 @@
 				AAB270DB2AF922E800CCF736 /* FirebaseAuth in Frameworks */,
 				AAB270E12AF922E800CCF736 /* FirebaseStorage in Frameworks */,
 				AAB270DD2AF922E800CCF736 /* FirebaseFirestore in Frameworks */,
+				B7950E5E2B1253950028811F /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -144,6 +150,7 @@
 		B7350C8C2AB773E100C33F7D /* HuacaBrava */ = {
 			isa = PBXGroup;
 			children = (
+				B7950E5B2B124E0A0028811F /* old */,
 				B7C304212B0E7810008E0742 /* producto */,
 				B7E9357B2AED66FA003579B9 /* cliente */,
 				B7E935752AED5ADE003579B9 /* carrito */,
@@ -158,9 +165,7 @@
 				B7350C982AB773E200C33F7D /* LaunchScreen.storyboard */,
 				B7350C9B2AB773E200C33F7D /* Info.plist */,
 				B7AFB2D52AFFC5740028A1A8 /* GoogleService-Info.plist */,
-				B70D145C2ABB5FA5001F4014 /* LoginViewController.swift */,
 				B70D145E2ABB663D001F4014 /* MenuViewController.swift */,
-				B7DDCDA42AD1A4B80029242D /* RegisterViewController.swift */,
 				B7C5363E2AD716CC0083609C /* LoginAltViewController.swift */,
 				B7E7D8BA2AD7208E0050D737 /* CarritoViewController.swift */,
 				B76F6FE92AE049C50036D73C /* InicioViewController.swift */,
@@ -172,6 +177,8 @@
 				B7E935792AED63C4003579B9 /* PlatosDisponiblesViewController.swift */,
 				AAB270E22AF932F800CCF736 /* OpcionesViewController.swift */,
 				B7C3041F2B0E77B4008E0742 /* BuscarViewController.swift */,
+				B7950E592B124DFF0028811F /* ProductoViewController.swift */,
+				B7950E612B126B5E0028811F /* DetalleProductoViewController.swift */,
 			);
 			path = HuacaBrava;
 			sourceTree = "<group>";
@@ -221,6 +228,15 @@
 				B76F6FE52AE040F50036D73C /* CartaDetalleViewController.swift */,
 			);
 			path = carta;
+			sourceTree = "<group>";
+		};
+		B7950E5B2B124E0A0028811F /* old */ = {
+			isa = PBXGroup;
+			children = (
+				B70D145C2ABB5FA5001F4014 /* LoginViewController.swift */,
+				B7DDCDA42AD1A4B80029242D /* RegisterViewController.swift */,
+			);
+			path = old;
 			sourceTree = "<group>";
 		};
 		B7C304212B0E7810008E0742 /* producto */ = {
@@ -296,6 +312,7 @@
 				AAB270DC2AF922E800CCF736 /* FirebaseFirestore */,
 				AAB270DE2AF922E800CCF736 /* FirebaseMessaging */,
 				AAB270E02AF922E800CCF736 /* FirebaseStorage */,
+				B7950E5D2B1253950028811F /* Lottie */,
 			);
 			productName = HuacaBrava;
 			productReference = B7350C8A2AB773E100C33F7D /* HuacaBrava.app */;
@@ -327,6 +344,7 @@
 			mainGroup = B7350C812AB773E100C33F7D;
 			packageReferences = (
 				AAB270D72AF922E800CCF736 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				B7950E5C2B1253950028811F /* XCRemoteSwiftPackageReference "lottie-spm" */,
 			);
 			productRefGroup = B7350C8B2AB773E100C33F7D /* Products */;
 			projectDirPath = "";
@@ -387,6 +405,7 @@
 				B7FD32102AC871F500104E81 /* AdminBebidaViewController.swift in Sources */,
 				B7E9357A2AED63C4003579B9 /* PlatosDisponiblesViewController.swift in Sources */,
 				B7D41D162AE9929200DA7757 /* InicioCollectionViewCell.swift in Sources */,
+				B7950E622B126B5E0028811F /* DetalleProductoViewController.swift in Sources */,
 				B7FD320C2AC868E000104E81 /* AdminBebida.swift in Sources */,
 				B7446D952AC491B9001D80B3 /* AdminPlatoTableViewCell.swift in Sources */,
 				B7350C922AB773E100C33F7D /* ViewController.swift in Sources */,
@@ -396,6 +415,7 @@
 				B76F6FE22AE03E320036D73C /* CartaAlt.swift in Sources */,
 				B7FD320A2AC866A700104E81 /* AdminBebidaTableViewCell.swift in Sources */,
 				B7E935822AED7755003579B9 /* CarritoTableViewCell.swift in Sources */,
+				B7950E5A2B124DFF0028811F /* ProductoViewController.swift in Sources */,
 				B7350C902AB773E100C33F7D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -622,6 +642,14 @@
 				minimumVersion = 10.0.0;
 			};
 		};
+		B7950E5C2B1253950028811F /* XCRemoteSwiftPackageReference "lottie-spm" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-spm.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -649,6 +677,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = AAB270D72AF922E800CCF736 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseStorage;
+		};
+		B7950E5D2B1253950028811F /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B7950E5C2B1253950028811F /* XCRemoteSwiftPackageReference "lottie-spm" */;
+			productName = Lottie;
 		};
 /* End XCSwiftPackageProductDependency section */
 
