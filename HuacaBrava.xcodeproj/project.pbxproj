@@ -174,7 +174,6 @@
 				B76F6FE72AE0469D0036D73C /* MontoViewController.swift */,
 				B76F6FEB2AE049E40036D73C /* UbicacionViewController.swift */,
 				B7E935762AED5B61003579B9 /* HuacaBravaDataModel.xcdatamodeld */,
-				B7E935792AED63C4003579B9 /* PlatosDisponiblesViewController.swift */,
 				AAB270E22AF932F800CCF736 /* OpcionesViewController.swift */,
 				B7C3041F2B0E77B4008E0742 /* BuscarViewController.swift */,
 				B7950E592B124DFF0028811F /* ProductoViewController.swift */,
@@ -235,6 +234,7 @@
 			children = (
 				B70D145C2ABB5FA5001F4014 /* LoginViewController.swift */,
 				B7DDCDA42AD1A4B80029242D /* RegisterViewController.swift */,
+				B7E935792AED63C4003579B9 /* PlatosDisponiblesViewController.swift */,
 			);
 			path = old;
 			sourceTree = "<group>";
