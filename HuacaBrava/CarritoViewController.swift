@@ -28,9 +28,8 @@ class CarritoViewController: UIViewController, UITableViewDataSource, UITableVie
         let cell = tableView.dequeueReusableCell(withIdentifier: "itemCarrito", for: indexPath) as! CarritoTableViewCell
         let carrito = carritoList[indexPath.row]
         cell.nombreCarritoLabel.text = carrito.nombre
-        cell.fotoCarritoImageView.image = UIImage(named: carrito.foto!)
-        cell.precioCarritoLabel.text = carrito.precio
-        cell.stockCarritoLabel.text = carrito.stock
+        cell.precioCarritoLabel.text = "S/ \(carrito.precio)"
+        cell.cantidadCarritoLabel.text = "\(carrito.cantidad)"
         return cell
     }
     
@@ -42,11 +41,18 @@ class CarritoViewController: UIViewController, UITableViewDataSource, UITableVie
         let deleteAction = UIContextualAction(style: .destructive,
                                               title: "Eliminar",
                                               handler: { _,_, complete in
-            let item = self.carritoList[indexPath.row]
-            self.deleteCoreData(carrito: item)
-            self.carritoList.remove(at: indexPath.row)
-            self.carritoTableView.deleteRows(at: [indexPath], with: .automatic)
-            complete(true)
+            let alert = UIAlertController(title: "Aviso", message: "¿Está seguro que desea eliminar este producto del carrito?", preferredStyle: .alert)
+            let button = UIAlertAction(title: "Sí, eliminar", style:.destructive) { action in
+                let item = self.carritoList[indexPath.row]
+                self.deleteCoreData(carrito: item)
+                self.carritoList.remove(at: indexPath.row)
+                self.carritoTableView.deleteRows(at: [indexPath], with: .automatic)
+                complete(true)
+            }
+            let cancel = UIAlertAction(title: "No, cancelar", style: .cancel)
+            alert.addAction(button)
+            alert.addAction(cancel)
+            self.present(alert, animated: true)
         })
         deleteAction.backgroundColor = .red
         

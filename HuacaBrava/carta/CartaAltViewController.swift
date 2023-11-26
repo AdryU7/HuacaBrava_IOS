@@ -6,6 +6,12 @@
 //
 
 import UIKit
+import Firebase
+
+struct CartaFirebase {
+    let titulo: String
+    let descripcion: String
+}
 
 class CartaAltViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     @IBOutlet weak var cartaAltTableView: UITableView!

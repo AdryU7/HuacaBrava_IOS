@@ -11,6 +11,8 @@ import Firebase
 struct Productos {
     let foto: String
     let nombre: String
+    let descripcion: String
+    let tipo: String
     let precio_anterior: Double
     let precio_actual: Double
     let stock: Int
@@ -56,6 +58,10 @@ class ProductoViewController: UIViewController, UITableViewDataSource, UITableVi
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let selectedProduct = productosList[indexPath.row]
+        if let detalleProductoVC = storyboard?.instantiateViewController(withIdentifier: "DetalleProductoViewController") as? DetalleProductoViewController {
+            detalleProductoVC.producto = selectedProduct
+            navigationController?.pushViewController(detalleProductoVC, animated: true)
+        }
     }
 }
 
@@ -85,11 +91,13 @@ extension ProductoViewController {
                         let data = document.data()
                         let foto = data["foto"] as? String ?? ""
                         let nombre = data["nombre"] as? String ?? ""
+                        let descripcion = data["descripcion"] as? String ?? ""
+                        let tipo = data["tipo"] as? String ?? ""
                         let precio_anterior = data["precio_anterior"] as? Double ?? 0
                         let precio_actual = data["precio_actual"] as? Double ?? 0
                         let stock = data["stock"] as? Int ?? 0
                         
-                        let producto = Productos(foto: foto, nombre: nombre, precio_anterior: precio_anterior, precio_actual: precio_actual, stock: stock)
+                        let producto = Productos(foto: foto, nombre: nombre, descripcion: descripcion, tipo: tipo, precio_anterior: precio_anterior, precio_actual: precio_actual, stock: stock)
                         self.productosList.append(producto)
                     }
                     self.productosTableView.reloadData()

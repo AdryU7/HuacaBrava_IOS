@@ -9,10 +9,9 @@ import UIKit
 
 class CarritoTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var fotoCarritoImageView: UIImageView!
     @IBOutlet weak var nombreCarritoLabel: UILabel!
     @IBOutlet weak var precioCarritoLabel: UILabel!
-    @IBOutlet weak var stockCarritoLabel: UILabel!
+    @IBOutlet weak var cantidadCarritoLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

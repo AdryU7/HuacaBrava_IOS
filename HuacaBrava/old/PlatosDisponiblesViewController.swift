@@ -37,7 +37,7 @@ class PlatosDisponiblesViewController: UIViewController, UITableViewDataSource {
         cell.stockLabel.text = plato.stock
         cell.fotoImageView.image = UIImage(named: plato.foto)
         
-        // Agregar un botón para agregar al carrito en tu celda y conectarlo a un método
+        /// Agregar un botón para agregar al carrito en tu celda y conectarlo a un método
         cell.agregarAlCarritoButton.addTarget(self, action: #selector(agregarCarritoButton(_:)), for: .touchUpInside)
         cell.agregarAlCarritoButton.tag = indexPath.row
         return cell
@@ -48,13 +48,13 @@ class PlatosDisponiblesViewController: UIViewController, UITableViewDataSource {
         let contextCoreData = appDelegate.persistentContainer.viewContext
         let selectedPlato = platoList[sender.tag]
         
-        // Verificar si el plato ya está en el carrito
+        /// Verificar si el plato ya está en el carrito
         if !carritoItems.contains(where: { $0.nombre == selectedPlato.nombre }) {
-            // Crear un objeto CarritoItem y configurar sus atributos con los datos seleccionados
+            /// Crear un objeto CarritoItem y configurar sus atributos con los datos seleccionados
             let carritoItem = CarritoEntity(context: contextCoreData)
             carritoItem.nombre = selectedPlato.nombre
-            carritoItem.precio = selectedPlato.precio
-            carritoItem.stock = selectedPlato.stock
+            //carritoItem.precio = selectedPlato.precio
+            //carritoItem.stock = selectedPlato.stock
             carritoItem.foto = selectedPlato.foto
             carritoItem.cantidad = 1
             
