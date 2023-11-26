@@ -10,7 +10,6 @@ import UIKit
 class CartaAltTableViewCell: UITableViewCell {
 
     @IBOutlet weak var tituloLabel: UILabel!
-    @IBOutlet weak var descripcionLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

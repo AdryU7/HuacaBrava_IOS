@@ -38,7 +38,6 @@ class CartaAltViewController: UIViewController, UITableViewDataSource, UITableVi
         let cell = tableView.dequeueReusableCell(withIdentifier: "itemCarta", for: indexPath) as! CartaAltTableViewCell
         let card = cartas[indexPath.row]
         cell.tituloLabel?.text = card.titulo
-        cell.descripcionLabel?.text = card.descripcion
         return cell
     }
     // DELEGATE
