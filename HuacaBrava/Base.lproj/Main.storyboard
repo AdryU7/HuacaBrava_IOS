@@ -1854,7 +1854,7 @@
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="gKH-3z-0SM">
                                                     <rect key="frame" x="21.666666666666671" y="18" width="100" height="100"/>
                                                     <subviews>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4NM-hh-yVN">
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="food-icon-design-vector" translatesAutoresizingMaskIntoConstraints="NO" id="4NM-hh-yVN">
                                                             <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="100" id="X6W-9v-QBP"/>
@@ -2126,6 +2126,7 @@
         <image name="brasa_fondo" width="866" height="1297"/>
         <image name="cart.fill" catalog="system" width="128" height="102"/>
         <image name="creditcard.circle.fill" catalog="system" width="128" height="123"/>
+        <image name="food-icon-design-vector" width="1200" height="1200"/>
         <image name="fork.knife" catalog="system" width="94" height="128"/>
         <image name="fork.knife.circle.fill" catalog="system" width="128" height="123"/>
         <image name="house.fill" catalog="system" width="128" height="104"/>

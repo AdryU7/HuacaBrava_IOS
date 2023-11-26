@@ -50,19 +50,12 @@ class ProductoViewController: UIViewController, UITableViewDataSource, UITableVi
         return cell
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 136
+    }
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let selectedProduct = productosList[indexPath.row]
-        performSegue(withIdentifier: "DetalleProductoSegue", sender: productoSeleccionado)
-    }
-
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "DetalleProductoSegue" {
-            if let destinationVC = segue.destination as? DetalleProductoViewController {
-                if let selectedProduct = sender as? Productos {
-                    destinationVC.producto = selectedProduct
-                }
-            }
-        }
     }
 }
 
