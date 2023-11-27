@@ -862,6 +862,7 @@
                     <navigationItem key="navigationItem" id="b7a-ct-Pf2"/>
                     <connections>
                         <outlet property="apellidosTextField" destination="iBv-Fo-rT0" id="DHo-BE-dRh"/>
+                        <outlet property="confirmarPassTextField" destination="tBv-Lr-v7b" id="qZD-XV-sXn"/>
                         <outlet property="emailTextField" destination="rH8-cr-pGx" id="svc-8J-xUI"/>
                         <outlet property="fondoImageView" destination="w3C-NI-gRo" id="Wej-We-qhK"/>
                         <outlet property="miView" destination="Bhf-5b-3SO" id="YPz-H1-WLc"/>
@@ -1172,7 +1173,7 @@
             </objects>
             <point key="canvasLocation" x="5038.9312977099235" y="1480.9859154929579"/>
         </scene>
-        <!--Ajustes de Perfil-->
+        <!--Datos de perfil-->
         <scene sceneID="AzP-tL-kpv">
             <objects>
                 <viewController id="hb3-gV-DH5" sceneMemberID="viewController">
@@ -1182,7 +1183,7 @@
                         <viewLayoutGuide key="safeArea" id="LP0-Wn-YRL"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Ajustes de Perfil" id="6P3-Bq-rbo"/>
+                    <navigationItem key="navigationItem" title="Datos de perfil" id="6P3-Bq-rbo"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wco-L1-nTw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

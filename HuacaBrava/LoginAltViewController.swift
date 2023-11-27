@@ -16,7 +16,8 @@ class LoginAltViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        passwordTextField.isSecureTextEntry = true
+        
         // Configura el radio de las esquinas del UIView
         miView.layer.cornerRadius = 10 // Ajusta el valor según tus preferencias
         miView.layer.masksToBounds = true

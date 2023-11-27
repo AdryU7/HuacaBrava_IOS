@@ -17,9 +17,12 @@ class RegisterAltViewController: UIViewController {
     @IBOutlet weak var apellidosTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var confirmarPassTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        passwordTextField.isSecureTextEntry = true
+        confirmarPassTextField.isSecureTextEntry = true
         
         // Configura el radio de las esquinas del UIView
         miView.layer.cornerRadius = 10 // Ajusta el valor según tus preferencias
@@ -55,7 +58,7 @@ extension RegisterAltViewController {
             "email": email
         ]) { error in
             if let e = error {
-                print("Se presento un error")
+                print("Se presento un error: \(e)")
             } else {
                 self.navigationController?.popViewController(animated: true)
             }
