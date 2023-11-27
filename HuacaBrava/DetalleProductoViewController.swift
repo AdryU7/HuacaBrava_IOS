@@ -33,23 +33,26 @@ class DetalleProductoViewController: UIViewController {
             }
             nombreDetProdLabel.text = product.nombre
             descripcionDetProdLabel.text = product.descripcion
-            precioActualDetProdLabel.text = "S/ \(product.precio_actual)"
+            precioActualDetProdLabel.text = "S/ \(String(format: "%.2f", product.precio_actual))"
             if (product.precio_anterior == 0) {
                 precioAnteriorDetProdLabel.removeFromSuperview()
             }
-            precioAnteriorDetProdLabel.text = "S/ \(product.precio_anterior)"
+            let precioAnterior = "S/ \(String(format: "%.2f", product.precio_anterior))"
+            let attributeString = NSMutableAttributedString(string: precioAnterior)
+            attributeString.addAttribute(NSAttributedString.Key.strikethroughStyle, value: 2, range: NSMakeRange(0, attributeString.length))
+            precioAnteriorDetProdLabel.attributedText = attributeString
             stockDetProdLabel.text = "Stock: \(product.stock)"
         }
         
-        configurarEstadoButton()
-        stepper.minimumValue = 0
-        stepper.value = 0
+        self.configurarEstadoButton()
+        stepper.minimumValue = 1
+        stepper.value = 1
         stepper.addTarget(self, action: #selector(stepperValueChanged(_:)), for: .valueChanged)
     }
     
     @IBAction func stepperValueChanged(_ sender: UIStepper) {
         cantidadDetProdLabel.text = Int(sender.value).description
-        configurarEstadoButton()
+        self.configurarEstadoButton()
     }
     
     func configurarEstadoButton() {
@@ -68,11 +71,13 @@ class DetalleProductoViewController: UIViewController {
     func cambiarEstadoButton(agotado: Bool) {
         if agotado {
             agregarAlCarritoButton.setTitle("Agotado", for: .normal)
-            agregarAlCarritoButton.backgroundColor = .lightGray
+            agregarAlCarritoButton.backgroundColor = .systemGray5
+            agregarAlCarritoButton.layer.cornerRadius = 5
             agregarAlCarritoButton.isEnabled = false
         } else {
             agregarAlCarritoButton.setTitle("Agregar al carrito", for: .normal)
             agregarAlCarritoButton.backgroundColor = .systemBlue
+            agregarAlCarritoButton.layer.cornerRadius = 5
             agregarAlCarritoButton.isEnabled = true
         }
     }
@@ -84,9 +89,7 @@ class DetalleProductoViewController: UIViewController {
             return
         }
         
-        if cantidad <= 0 {
-            showAlert(titulo: "ERROR", mensaje: "Debe ingresar al menos un producto")
-        } else if cantidad > product.stock {
+        if cantidad > product.stock {
             showAlert(titulo: "ERROR", mensaje: "La cantidad ingresada no debe exceder al stock disponible.")
         } else {
             self.agregarItem(nombre: product.nombre, precio: (product.precio_actual * Double(cantidad)), cantidad: cantidad)

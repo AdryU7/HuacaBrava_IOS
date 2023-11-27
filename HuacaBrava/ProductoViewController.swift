@@ -32,8 +32,11 @@ class ProductoViewController: UIViewController, UITableViewDataSource, UITableVi
         if (productos.precio_anterior == 0) {
             cell.precioAnteriorProdLabel.removeFromSuperview()
         }
-        cell.precioAnteriorProdLabel.text = "S/ \(productos.precio_anterior)"
-        cell.precioActualProdLabel.text = "S/ \(productos.precio_actual)"
+        let precioAnterior = "S/ \(String(format: "%.2f", productos.precio_anterior))"
+        let attributeString = NSMutableAttributedString(string: precioAnterior)
+        attributeString.addAttribute(NSAttributedString.Key.strikethroughStyle, value: 2, range: NSMakeRange(0, attributeString.length))
+        cell.precioAnteriorProdLabel.attributedText = attributeString
+        cell.precioActualProdLabel.text = "S/ \(String(format: "%.2f", productos.precio_actual))"
         cell.stockProdLabel.text = "\(productos.stock)"
         // IMAGEN URL
         if let url_img = URL(string: productos.foto) {
@@ -60,7 +63,7 @@ extension ProductoViewController {
         let db = Firestore.firestore()
         db.collection("productos").getDocuments(completion: { (query, error) in
             if let e = error {
-                print("ERROR")
+                print(e)
             } else {
                 if let q = query {
                     for document in q.documents {

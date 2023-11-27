@@ -12,6 +12,7 @@ class CarritoViewController: UIViewController, UITableViewDataSource, UITableVie
     var carritoList: [CarritoEntity] = []
     
     @IBOutlet weak var carritoTableView: UITableView!
+    @IBOutlet weak var subtotalLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,7 +29,7 @@ class CarritoViewController: UIViewController, UITableViewDataSource, UITableVie
         let cell = tableView.dequeueReusableCell(withIdentifier: "itemCarrito", for: indexPath) as! CarritoTableViewCell
         let carrito = carritoList[indexPath.row]
         cell.nombreCarritoLabel.text = carrito.nombre
-        cell.precioCarritoLabel.text = "S/ \(carrito.precio)"
+        cell.precioCarritoLabel.text = "S/ \(String(format: "%.2f", carrito.precio))"
         cell.cantidadCarritoLabel.text = "\(carrito.cantidad)"
         return cell
     }

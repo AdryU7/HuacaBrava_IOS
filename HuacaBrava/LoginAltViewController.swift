@@ -43,8 +43,6 @@ class LoginAltViewController: UIViewController {
             }else{
                 self.loginFirebase(email: email, password: pass)
             }
-        }else{
-            showAlert(mensaje: "NADA")
         }
     }
     
@@ -71,7 +69,7 @@ extension LoginAltViewController {
                 let uid = user.user.uid
                 self.getAccountInfo(uid: uid)
             } else {
-                self.showAlert(mensaje: "Email y/o password invalidos, por favor vuelva a ingresar sus credenciales correctamente")
+                self.showAlert(mensaje: "Correo y/o contraseña inválidos, por favor vuelva a ingresar sus credenciales correctamente")
             }
         }
     }

@@ -32,13 +32,8 @@ class InicioViewController: UIViewController, UICollectionViewDataSource {
             cell.fotoProductoImageView.load(url: url_img)
         }
         cell.nombreProductoLabel.text = productos.nombre
-        cell.precioActualProductoLabel.text = "S/ \(productos.precio_actual)"
+        cell.precioActualProductoLabel.text = "S/ \(String(format: "%.2f", productos.precio_actual))"
         
-        // Configurar el borde circular para la UIView dentro de la celda
-        // Esto hace que el radio del borde sea la mitad del ancho, lo que crea un borde circular
-        //cell.imageLayoutView.layer.cornerRadius = cell.imageLayoutView.frame.size.width / 2
-        // Asegúrate de activar clipsToBounds para que el contenido de la vista se recorte para ajustarse al borde redondeado
-        //cell.imageLayoutView.clipsToBounds = true
         cell.fotoProductoImageView.layer.cornerRadius = 15
         cell.fotoProductoImageView.layer.masksToBounds = true
         cell.productoLayoutView.layer.cornerRadius = 10
@@ -64,7 +59,7 @@ extension InicioViewController {
             .limit(to: 5)
             .getDocuments(completion: { (query, error) in
             if let e = error {
-                print("ERROR")
+                print(e)
             } else {
                 if let q = query {
                     for document in q.documents {
