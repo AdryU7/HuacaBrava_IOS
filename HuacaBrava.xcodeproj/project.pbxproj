@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5C4B76282B14248200098B86 /* Productos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C4B76272B14248200098B86 /* Productos.swift */; };
+		5C4B762B2B14572800098B86 /* ImageURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C4B762A2B14572800098B86 /* ImageURL.swift */; };
 		AAB270D92AF922E800CCF736 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = AAB270D82AF922E800CCF736 /* FirebaseAnalytics */; };
 		AAB270DB2AF922E800CCF736 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = AAB270DA2AF922E800CCF736 /* FirebaseAuth */; };
 		AAB270DD2AF922E800CCF736 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = AAB270DC2AF922E800CCF736 /* FirebaseFirestore */; };
@@ -63,6 +65,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5C4B76272B14248200098B86 /* Productos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Productos.swift; sourceTree = "<group>"; };
+		5C4B762A2B14572800098B86 /* ImageURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageURL.swift; sourceTree = "<group>"; };
 		AAB270E22AF932F800CCF736 /* OpcionesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpcionesViewController.swift; sourceTree = "<group>"; };
 		B70D145C2ABB5FA5001F4014 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		B70D145E2ABB663D001F4014 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
@@ -131,6 +135,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5C4B76292B14570E00098B86 /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				5C4B762A2B14572800098B86 /* ImageURL.swift */,
+			);
+			path = utils;
+			sourceTree = "<group>";
+		};
 		B7350C812AB773E100C33F7D = {
 			isa = PBXGroup;
 			children = (
@@ -151,12 +163,11 @@
 			isa = PBXGroup;
 			children = (
 				B7950E5B2B124E0A0028811F /* old */,
+				5C4B76292B14570E00098B86 /* utils */,
 				B7C304212B0E7810008E0742 /* producto */,
-				B7E9357B2AED66FA003579B9 /* cliente */,
 				B7E935752AED5ADE003579B9 /* carrito */,
 				B7D41D142AE9922400DA7757 /* inicio */,
 				B76772612AC8818F0024A694 /* carta */,
-				B7446D922AC49178001D80B3 /* admin */,
 				B7350C8D2AB773E100C33F7D /* AppDelegate.swift */,
 				B7350C8F2AB773E100C33F7D /* SceneDelegate.swift */,
 				B7350C912AB773E100C33F7D /* ViewController.swift */,
@@ -217,10 +228,6 @@
 		B76772612AC8818F0024A694 /* carta */ = {
 			isa = PBXGroup;
 			children = (
-				B76772622AC881BF0024A694 /* CartaTableViewCell.swift */,
-				B76772642AC882200024A694 /* CartaViewController.swift */,
-				B76772662AC882630024A694 /* Carta.swift */,
-				B7DDCDA62AD1AA5A0029242D /* CartaSecondViewController.swift */,
 				B76F6FDF2AE038D80036D73C /* CartaAltViewController.swift */,
 				B76F6FE12AE03E320036D73C /* CartaAlt.swift */,
 				B76F6FE32AE040210036D73C /* CartaAltTableViewCell.swift */,
@@ -232,6 +239,12 @@
 		B7950E5B2B124E0A0028811F /* old */ = {
 			isa = PBXGroup;
 			children = (
+				B7446D922AC49178001D80B3 /* admin */,
+				B7E9357B2AED66FA003579B9 /* cliente */,
+				B76772622AC881BF0024A694 /* CartaTableViewCell.swift */,
+				B76772642AC882200024A694 /* CartaViewController.swift */,
+				B76772662AC882630024A694 /* Carta.swift */,
+				B7DDCDA62AD1AA5A0029242D /* CartaSecondViewController.swift */,
 				B70D145C2ABB5FA5001F4014 /* LoginViewController.swift */,
 				B7DDCDA42AD1A4B80029242D /* RegisterViewController.swift */,
 				B7E935792AED63C4003579B9 /* PlatosDisponiblesViewController.swift */,
@@ -243,6 +256,7 @@
 			isa = PBXGroup;
 			children = (
 				B7C304222B0E7830008E0742 /* ProductoTableViewCell.swift */,
+				5C4B76272B14248200098B86 /* Productos.swift */,
 			);
 			path = producto;
 			sourceTree = "<group>";
@@ -379,6 +393,7 @@
 				B7E935802AED6805003579B9 /* PlatoTableViewCell.swift in Sources */,
 				AAB270E32AF932F800CCF736 /* OpcionesViewController.swift in Sources */,
 				B7C5363F2AD716CC0083609C /* LoginAltViewController.swift in Sources */,
+				5C4B76282B14248200098B86 /* Productos.swift in Sources */,
 				B7446DA12AC4A5DE001D80B3 /* AdminEmpleadoViewController.swift in Sources */,
 				B76F6FEC2AE049E40036D73C /* UbicacionViewController.swift in Sources */,
 				B70D145D2ABB5FA5001F4014 /* LoginViewController.swift in Sources */,
@@ -403,6 +418,7 @@
 				B747EF8B2ADAE55F00589DA7 /* RegisterAltViewController.swift in Sources */,
 				B76F6FEA2AE049C50036D73C /* InicioViewController.swift in Sources */,
 				B7FD32102AC871F500104E81 /* AdminBebidaViewController.swift in Sources */,
+				5C4B762B2B14572800098B86 /* ImageURL.swift in Sources */,
 				B7E9357A2AED63C4003579B9 /* PlatosDisponiblesViewController.swift in Sources */,
 				B7D41D162AE9929200DA7757 /* InicioCollectionViewCell.swift in Sources */,
 				B7950E622B126B5E0028811F /* DetalleProductoViewController.swift in Sources */,
