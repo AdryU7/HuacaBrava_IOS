@@ -19,6 +19,16 @@ class CarritoViewController: UIViewController, UITableViewDataSource, UITableVie
         carritoTableView.dataSource = self
         carritoTableView.delegate = self
         listCoreData()
+        actualizarSubtotal()
+    }
+    
+    func actualizarSubtotal() {
+        let subtotal = calcularSubtotal()
+        subtotalLabel.text = "Subtotal: S/ \(String(format: "%.2f", subtotal))"
+    }
+    
+    func calcularSubtotal() -> Double {
+        return carritoList.reduce(0.0) { $0 + $1.precio * Double($1.cantidad) }
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -84,6 +94,7 @@ extension CarritoViewController {
         contextCoreData.delete(carrito)
         do {
             try contextCoreData.save()
+            actualizarSubtotal()
         } catch let error as NSError {
             print("Se presento un error: \(error)")
         }

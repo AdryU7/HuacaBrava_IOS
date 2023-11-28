@@ -288,8 +288,8 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subtotal: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SWG-Cv-nKt">
-                                <rect key="frame" x="20" y="760" width="222" height="25.333333333333371"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                <rect key="frame" x="20" y="762" width="222" height="21.666666666666629"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -301,7 +301,7 @@
                             <constraint firstItem="0Ej-Ff-1y3" firstAttribute="leading" secondItem="12T-H0-p9k" secondAttribute="leading" id="9eo-Di-e1x"/>
                             <constraint firstItem="bDT-hj-zbW" firstAttribute="top" secondItem="0Ej-Ff-1y3" secondAttribute="bottom" constant="20" id="Cou-rb-Jw4"/>
                             <constraint firstItem="SWG-Cv-nKt" firstAttribute="leading" secondItem="12T-H0-p9k" secondAttribute="leading" constant="20" id="HAX-R1-BGM"/>
-                            <constraint firstItem="SWG-Cv-nKt" firstAttribute="top" secondItem="0Ej-Ff-1y3" secondAttribute="bottom" constant="25" id="NeT-LR-Frl"/>
+                            <constraint firstItem="SWG-Cv-nKt" firstAttribute="top" secondItem="0Ej-Ff-1y3" secondAttribute="bottom" constant="27" id="NeT-LR-Frl"/>
                             <constraint firstItem="dF4-4v-tAk" firstAttribute="top" secondItem="12T-H0-p9k" secondAttribute="top" constant="30" id="Ri2-hP-56D"/>
                             <constraint firstItem="bDT-hj-zbW" firstAttribute="leading" secondItem="12T-H0-p9k" secondAttribute="leading" constant="250" id="ShO-SH-4bU"/>
                             <constraint firstItem="12T-H0-p9k" firstAttribute="bottom" secondItem="0Ej-Ff-1y3" secondAttribute="bottom" constant="107" id="VBi-cX-2Yn"/>
@@ -2287,7 +2287,7 @@
                                             <action selector="stepperValueChanged:" destination="yKb-08-2El" eventType="valueChanged" id="Egy-Fe-cls"/>
                                         </connections>
                                     </stepper>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A6H-Kq-bWe">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A6H-Kq-bWe">
                                         <rect key="frame" x="104" y="0.0" width="66" height="32"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
@@ -2503,7 +2503,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="B1e-Vh-xv9"/>
+        <segue reference="xCV-ce-Tt8"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="brasa_fondo" width="866" height="1297"/>

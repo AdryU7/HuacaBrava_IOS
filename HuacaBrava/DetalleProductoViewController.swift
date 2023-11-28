@@ -63,6 +63,7 @@ class DetalleProductoViewController: UIViewController {
         if stock == 0 {
             cambiarEstadoButton(agotado: true)
             stepper.isEnabled = false
+            cantidadDetProdLabel.removeFromSuperview()
         } else {
             cambiarEstadoButton(agotado: false)
         }
