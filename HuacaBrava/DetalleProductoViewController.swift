@@ -23,6 +23,7 @@ class DetalleProductoViewController: UIViewController {
     
     var producto: Productos?
     var carritoItem: CarritoEntity = CarritoEntity()
+    var carritoList: [CarritoEntity] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -90,10 +91,17 @@ class DetalleProductoViewController: UIViewController {
             return
         }
         
-        if cantidad > product.stock {
-            showAlert(titulo: "ERROR", mensaje: "La cantidad ingresada no debe exceder al stock disponible.")
+        if carritoList.contains(where: { $0.nombre == product.nombre }) {
+            let alert = UIAlertController(title: "Producto duplicado", message: "Este producto ya está en tu carrito.", preferredStyle: .alert)
+            let action = UIAlertAction(title: "OK", style: .default, handler: nil)
+            alert.addAction(action)
+            present(alert, animated: true, completion: nil)
         } else {
-            self.agregarItem(nombre: product.nombre, precio: (product.precio_actual * Double(cantidad)), cantidad: cantidad)
+            if cantidad > product.stock {
+                showAlert(titulo: "ERROR", mensaje: "La cantidad ingresada no debe exceder al stock disponible.")
+            } else {
+                self.agregarItem(nombre: product.nombre, precio: (product.precio_actual * Double(cantidad)), cantidad: cantidad)
+            }
         }
     }
     

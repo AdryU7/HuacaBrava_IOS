@@ -10,7 +10,16 @@ import Firebase
 
 struct CartaFirebase {
     let titulo: String
-    let descripcion: String
+    let descripcion_col01: String
+    let precio_col01: String
+    let descripcion_col02: String
+    let precio_col02: String
+    let descripcion_col03: String
+    let precio_col03: String
+    let descripcion_col04: String
+    let precio_col04: String
+    let descripcion_col05: String
+    let precio_col05: String
 }
 
 class CartaAltViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {

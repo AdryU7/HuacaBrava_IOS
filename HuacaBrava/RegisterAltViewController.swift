@@ -37,6 +37,13 @@ class RegisterAltViewController: UIViewController {
         self.registerAuth(nombres: nombres, apellidos: apellidos, email: email, password: password)
     }
     
+    func openAlert() {
+        let alert = UIAlertController(title: "¡Registro correcto!", message: "Usted ya está registrado en el sistema satisfactoriamente.", preferredStyle: .alert)
+        let action = UIAlertAction(title: "Aceptar", style: .default)
+        alert.addAction(action)
+        self.present(alert, animated: true)
+    }
+    
 }
 
 extension RegisterAltViewController {
@@ -60,6 +67,7 @@ extension RegisterAltViewController {
             if let e = error {
                 print("Se presento un error: \(e)")
             } else {
+                self.openAlert()
                 self.navigationController?.popViewController(animated: true)
             }
         }

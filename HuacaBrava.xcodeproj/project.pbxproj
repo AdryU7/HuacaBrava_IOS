@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		5C4B76282B14248200098B86 /* Productos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C4B76272B14248200098B86 /* Productos.swift */; };
 		5C4B762B2B14572800098B86 /* ImageURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C4B762A2B14572800098B86 /* ImageURL.swift */; };
+		5C7D2F512B16DF9D00ED03B0 /* PedidoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7D2F502B16DF9D00ED03B0 /* PedidoViewController.swift */; };
 		AAB270D92AF922E800CCF736 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = AAB270D82AF922E800CCF736 /* FirebaseAnalytics */; };
 		AAB270DB2AF922E800CCF736 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = AAB270DA2AF922E800CCF736 /* FirebaseAuth */; };
 		AAB270DD2AF922E800CCF736 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = AAB270DC2AF922E800CCF736 /* FirebaseFirestore */; };
@@ -67,6 +68,7 @@
 /* Begin PBXFileReference section */
 		5C4B76272B14248200098B86 /* Productos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Productos.swift; sourceTree = "<group>"; };
 		5C4B762A2B14572800098B86 /* ImageURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageURL.swift; sourceTree = "<group>"; };
+		5C7D2F502B16DF9D00ED03B0 /* PedidoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PedidoViewController.swift; sourceTree = "<group>"; };
 		AAB270E22AF932F800CCF736 /* OpcionesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpcionesViewController.swift; sourceTree = "<group>"; };
 		B70D145C2ABB5FA5001F4014 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		B70D145E2ABB663D001F4014 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
@@ -189,6 +191,7 @@
 				B7C3041F2B0E77B4008E0742 /* BuscarViewController.swift */,
 				B7950E592B124DFF0028811F /* ProductoViewController.swift */,
 				B7950E612B126B5E0028811F /* DetalleProductoViewController.swift */,
+				5C7D2F502B16DF9D00ED03B0 /* PedidoViewController.swift */,
 			);
 			path = HuacaBrava;
 			sourceTree = "<group>";
@@ -395,6 +398,7 @@
 				B7C5363F2AD716CC0083609C /* LoginAltViewController.swift in Sources */,
 				5C4B76282B14248200098B86 /* Productos.swift in Sources */,
 				B7446DA12AC4A5DE001D80B3 /* AdminEmpleadoViewController.swift in Sources */,
+				5C7D2F512B16DF9D00ED03B0 /* PedidoViewController.swift in Sources */,
 				B76F6FEC2AE049E40036D73C /* UbicacionViewController.swift in Sources */,
 				B70D145D2ABB5FA5001F4014 /* LoginViewController.swift in Sources */,
 				B7E7D8BB2AD7208E0050D737 /* CarritoViewController.swift in Sources */,

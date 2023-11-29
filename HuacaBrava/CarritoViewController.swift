@@ -31,6 +31,18 @@ class CarritoViewController: UIViewController, UITableViewDataSource, UITableVie
         return carritoList.reduce(0.0) { $0 + $1.precio * Double($1.cantidad) }
     }
 
+    func productoExisteEnCarrito(_ nombreProducto: String?) -> Bool {
+        return carritoList.contains(where: { $0.nombre == nombreProducto })
+    }
+    
+    @IBAction func pagarButton(_ sender: UIButton) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        if let pedidoVC = storyboard.instantiateViewController(withIdentifier: "PedidoViewController") as? PedidoViewController {
+            pedidoVC.modalPresentationStyle = .fullScreen
+            present(pedidoVC, animated: true, completion: nil)
+        }
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return carritoList.count
     }
