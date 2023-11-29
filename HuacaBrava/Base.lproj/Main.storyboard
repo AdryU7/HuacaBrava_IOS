@@ -1642,16 +1642,97 @@
                                     </label>
                                 </subviews>
                             </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="UJP-We-e2B">
+                                <rect key="frame" x="20" y="411.66666666666669" width="353" height="28.666666666666686"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ofertas del momento" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OoD-I3-fKe">
+                                        <rect key="frame" x="0.0" y="0.0" width="353" height="28.666666666666668"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="SJW-1h-9Rz">
+                                <rect key="frame" x="20" y="460.33333333333326" width="353" height="308.66666666666674"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="itemOfertas" rowHeight="142" id="hRl-MY-0Zq" customClass="OfertasTableViewCell" customModule="HuacaBrava" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="353" height="142"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hRl-MY-0Zq" id="hf2-My-NKz">
+                                            <rect key="frame" x="0.0" y="0.0" width="353" height="142"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Mai-ck-ddJ">
+                                                    <rect key="frame" x="20" y="11" width="120" height="120"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cHk-Wx-l25">
+                                                            <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
+                                                        </imageView>
+                                                    </subviews>
+                                                </stackView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Ded-p4-1oO">
+                                                    <rect key="frame" x="148" y="10.999999999999998" width="185" height="20.333333333333329"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Combo para 4" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GGJ-pG-JcH">
+                                                            <rect key="frame" x="0.0" y="0.0" width="185" height="20.333333333333332"/>
+                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="QQK-ac-x6M">
+                                                    <rect key="frame" x="148" y="41.333333333333336" width="185" height="20.333333333333336"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="S/ 0.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ylI-yh-fcH">
+                                                            <rect key="frame" x="0.0" y="0.0" width="185" height="20.333333333333332"/>
+                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                            <color key="textColor" systemColor="systemRedColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Ded-p4-1oO" firstAttribute="leading" secondItem="Mai-ck-ddJ" secondAttribute="trailing" constant="8" symbolic="YES" id="AMT-Kv-FzP"/>
+                                                <constraint firstItem="QQK-ac-x6M" firstAttribute="top" secondItem="Ded-p4-1oO" secondAttribute="bottom" constant="10" id="HYc-ug-o97"/>
+                                                <constraint firstItem="Mai-ck-ddJ" firstAttribute="bottom" secondItem="hf2-My-NKz" secondAttribute="bottomMargin" id="Ih8-2g-Sl7"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="QQK-ac-x6M" secondAttribute="trailing" id="K1R-im-f2L"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Ded-p4-1oO" secondAttribute="trailing" id="bZv-c4-75W"/>
+                                                <constraint firstItem="Mai-ck-ddJ" firstAttribute="top" secondItem="hf2-My-NKz" secondAttribute="topMargin" id="bqH-G5-xXV"/>
+                                                <constraint firstItem="Mai-ck-ddJ" firstAttribute="leading" secondItem="hf2-My-NKz" secondAttribute="leadingMargin" id="hIr-th-Pss"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Mai-ck-ddJ" secondAttribute="trailing" constant="193" id="ln8-LZ-H9e"/>
+                                                <constraint firstItem="QQK-ac-x6M" firstAttribute="leading" secondItem="Mai-ck-ddJ" secondAttribute="trailing" constant="8" symbolic="YES" id="qHM-49-feT"/>
+                                                <constraint firstItem="Ded-p4-1oO" firstAttribute="top" secondItem="hf2-My-NKz" secondAttribute="topMargin" id="xgo-Dh-djr"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="fotoOfertaImageView" destination="cHk-Wx-l25" id="ILL-8a-ue5"/>
+                                            <outlet property="nombreOfertaLabel" destination="GGJ-pG-JcH" id="NDa-Tn-eei"/>
+                                            <outlet property="precioOfertaLabel" destination="ylI-yh-fcH" id="E8I-fB-k9a"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="dIh-7B-K74"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="SJW-1h-9Rz" firstAttribute="leading" secondItem="dIh-7B-K74" secondAttribute="leading" constant="20" id="0bO-fB-nn0"/>
+                            <constraint firstItem="UJP-We-e2B" firstAttribute="leading" secondItem="dIh-7B-K74" secondAttribute="leading" constant="20" id="5Gc-S2-Qmm"/>
                             <constraint firstItem="dIh-7B-K74" firstAttribute="trailing" secondItem="U2c-Vd-wmw" secondAttribute="trailing" constant="20" id="POh-Fa-gzG"/>
                             <constraint firstItem="2pb-ov-6oT" firstAttribute="top" secondItem="dIh-7B-K74" secondAttribute="top" constant="20" id="WYB-1m-cHP"/>
+                            <constraint firstItem="dIh-7B-K74" firstAttribute="trailing" secondItem="SJW-1h-9Rz" secondAttribute="trailing" constant="20" id="aJo-HT-8qA"/>
+                            <constraint firstItem="UJP-We-e2B" firstAttribute="top" secondItem="U2c-Vd-wmw" secondAttribute="bottom" constant="40" id="amd-vw-W3n"/>
                             <constraint firstItem="dIh-7B-K74" firstAttribute="trailing" secondItem="2pb-ov-6oT" secondAttribute="trailing" constant="20" id="g1q-a3-tPG"/>
+                            <constraint firstItem="SJW-1h-9Rz" firstAttribute="top" secondItem="UJP-We-e2B" secondAttribute="bottom" constant="20" id="g2e-bW-UD8"/>
+                            <constraint firstItem="dIh-7B-K74" firstAttribute="trailing" secondItem="UJP-We-e2B" secondAttribute="trailing" constant="20" id="mU1-v6-24i"/>
                             <constraint firstItem="2pb-ov-6oT" firstAttribute="leading" secondItem="dIh-7B-K74" secondAttribute="leading" constant="20" id="qn9-5C-U3U"/>
                             <constraint firstItem="U2c-Vd-wmw" firstAttribute="top" secondItem="2pb-ov-6oT" secondAttribute="bottom" constant="20" id="vOT-X5-Krl"/>
                             <constraint firstItem="U2c-Vd-wmw" firstAttribute="leading" secondItem="dIh-7B-K74" secondAttribute="leading" constant="20" id="wbN-uQ-stN"/>
+                            <constraint firstItem="dIh-7B-K74" firstAttribute="bottom" secondItem="SJW-1h-9Rz" secondAttribute="bottom" id="xbf-AG-mG8"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Inicio" id="nB4-he-Mot">
@@ -1670,6 +1751,7 @@
                         </rightBarButtonItems>
                     </navigationItem>
                     <connections>
+                        <outlet property="ofertasTableView" destination="SJW-1h-9Rz" id="fxs-CU-R1K"/>
                         <outlet property="productosCollectionView" destination="U2c-Vd-wmw" id="tS3-hW-aqZ"/>
                     </connections>
                 </viewController>
@@ -2905,7 +2987,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="B1e-Vh-xv9"/>
+        <segue reference="W4E-Jj-hVQ"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="brasa_fondo" width="866" height="1297"/>

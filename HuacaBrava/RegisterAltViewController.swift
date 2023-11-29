@@ -34,11 +34,18 @@ class RegisterAltViewController: UIViewController {
         let apellidos = apellidosTextField.text!
         let email = emailTextField.text!
         let password = passwordTextField.text!
-        self.registerAuth(nombres: nombres, apellidos: apellidos, email: email, password: password)
+        let confirm = confirmarPassTextField.text!
+        if nombres.isEmpty, apellidos.isEmpty, email.isEmpty, password.isEmpty, confirm.isEmpty {
+            self.openAlert(titulo: "Error", mensaje: "Debe ingresar todos sus credenciales.")
+        } else if confirm != password {
+            self.openAlert(titulo: "Error", mensaje: "La contraseña no coincide en los dos campos.")
+        } else {
+            self.registerAuth(nombres: nombres, apellidos: apellidos, email: email, password: password)
+        }
     }
     
-    func openAlert() {
-        let alert = UIAlertController(title: "¡Registro correcto!", message: "Usted ya está registrado en el sistema satisfactoriamente.", preferredStyle: .alert)
+    func openAlert(titulo: String, mensaje: String) {
+        let alert = UIAlertController(title: titulo, message: mensaje, preferredStyle: .alert)
         let action = UIAlertAction(title: "Aceptar", style: .default)
         alert.addAction(action)
         self.present(alert, animated: true)
@@ -52,6 +59,7 @@ extension RegisterAltViewController {
             if let user = result {
                 let uid = user.user.uid
                 self.registerFirestore(nombres: nombres, apellidos: apellidos, email: email, uid: uid)
+                self.openAlert(titulo: "Registro correcto", mensaje: "Usted ya puede ingresar al sistema.")
             } else {
                 print("Error")
             }
@@ -67,7 +75,6 @@ extension RegisterAltViewController {
             if let e = error {
                 print("Se presento un error: \(e)")
             } else {
-                self.openAlert()
                 self.navigationController?.popViewController(animated: true)
             }
         }
