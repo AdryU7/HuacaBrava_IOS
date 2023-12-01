@@ -29,13 +29,13 @@ class ProductoViewController: UIViewController, UITableViewDataSource, UITableVi
         let productos = productosList[indexPath.row]
         
         cell.nombreProdLabel.text = productos.nombre
-        if (productos.precio_anterior == 0) {
+        /*if (productos.precio_anterior == 0) {
             cell.precioAnteriorProdLabel.removeFromSuperview()
         }
         let precioAnterior = "S/ \(String(format: "%.2f", productos.precio_anterior))"
         let attributeString = NSMutableAttributedString(string: precioAnterior)
         attributeString.addAttribute(NSAttributedString.Key.strikethroughStyle, value: 2, range: NSMakeRange(0, attributeString.length))
-        cell.precioAnteriorProdLabel.attributedText = attributeString
+        cell.precioAnteriorProdLabel.attributedText = attributeString*/
         cell.precioActualProdLabel.text = "S/ \(String(format: "%.2f", productos.precio_actual))"
         cell.stockProdLabel.text = "\(productos.stock)"
         // IMAGEN URL
