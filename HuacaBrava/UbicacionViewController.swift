@@ -16,11 +16,11 @@ class UbicacionViewController: UIViewController {
         super.viewDidLoad()
         mapaMapView.overrideUserInterfaceStyle = .light
         
-        let pointTrujillo = CLLocationCoordinate2D(latitude: -8.1116778, longitude: -79.0287742)
+        let pointTrujillo = CLLocationCoordinate2D(latitude: -8.099970, longitude: -79.025810)
         
         let annotation = MKPointAnnotation()
-        annotation.title = "Trujillo"
-        annotation.subtitle = "Cuidad del Tiburon"
+        annotation.title = "Restaurante Huaca Brava"
+        annotation.subtitle = "El mejor lugar"
         annotation.coordinate = pointTrujillo
         
         mapaMapView.addAnnotation(annotation)

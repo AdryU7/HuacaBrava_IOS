@@ -20,6 +20,7 @@ class CarritoViewController: UIViewController, UITableViewDataSource, UITableVie
         carritoTableView.delegate = self
         listCoreData()
         actualizarSubtotal()
+        title = "Carrito"
     }
     
     func actualizarSubtotal() {
@@ -39,7 +40,7 @@ class CarritoViewController: UIViewController, UITableViewDataSource, UITableVie
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         if let pedidoVC = storyboard.instantiateViewController(withIdentifier: "PedidoViewController") as? PedidoViewController {
             pedidoVC.modalPresentationStyle = .fullScreen
-            present(pedidoVC, animated: true, completion: nil)
+            self.navigationController?.pushViewController(pedidoVC, animated: true)
         }
     }
     

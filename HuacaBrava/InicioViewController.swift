@@ -8,7 +8,7 @@
 import UIKit
 import Firebase
 
-class InicioViewController: UIViewController, UICollectionViewDataSource, UITableViewDelegate, UITableViewDataSource {
+class InicioViewController: UIViewController, UICollectionViewDataSource, UITableViewDelegate, UITableViewDataSource, UICollectionViewDelegate {
     @IBOutlet weak var productosCollectionView: UICollectionView!
     @IBOutlet weak var ofertasTableView: UITableView!
     
@@ -46,6 +46,14 @@ class InicioViewController: UIViewController, UICollectionViewDataSource, UITabl
         return cell
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let selectedProduct = productosList[indexPath.row]
+        if let detalleProductoVC = storyboard?.instantiateViewController(withIdentifier: "DetalleProductoViewController") as? DetalleProductoViewController {
+            detalleProductoVC.producto = selectedProduct
+            navigationController?.pushViewController(detalleProductoVC, animated: true)
+        }
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return ofertasList.count
     }
@@ -64,6 +72,22 @@ class InicioViewController: UIViewController, UICollectionViewDataSource, UITabl
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 142
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectedProduct = ofertasList[indexPath.row]
+        if let detalleProductoVC = storyboard?.instantiateViewController(withIdentifier: "DetalleProductoViewController") as? DetalleProductoViewController {
+            detalleProductoVC.producto = selectedProduct
+            navigationController?.pushViewController(detalleProductoVC, animated: true)
+        }
+    }
+    
+    @IBAction func gotoCarrito(_ sender: Any) {
+        let main = UIStoryboard(name: "Main", bundle: nil)
+        let vc = main.instantiateViewController(withIdentifier: "CarritoViewController") as! CarritoViewController
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    
 }
 
 extension InicioViewController: UICollectionViewDelegateFlowLayout {

@@ -64,6 +64,7 @@
 		B7FD320A2AC866A700104E81 /* AdminBebidaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FD32092AC866A700104E81 /* AdminBebidaTableViewCell.swift */; };
 		B7FD320C2AC868E000104E81 /* AdminBebida.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FD320B2AC868E000104E81 /* AdminBebida.swift */; };
 		B7FD32102AC871F500104E81 /* AdminBebidaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FD320F2AC871F500104E81 /* AdminBebidaViewController.swift */; };
+		D5104E532B184B970038C66E /* SucessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5104E522B184B970038C66E /* SucessViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -120,6 +121,7 @@
 		B7FD32092AC866A700104E81 /* AdminBebidaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminBebidaTableViewCell.swift; sourceTree = "<group>"; };
 		B7FD320B2AC868E000104E81 /* AdminBebida.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminBebida.swift; sourceTree = "<group>"; };
 		B7FD320F2AC871F500104E81 /* AdminBebidaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminBebidaViewController.swift; sourceTree = "<group>"; };
+		D5104E522B184B970038C66E /* SucessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SucessViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -195,6 +197,7 @@
 				B7950E592B124DFF0028811F /* ProductoViewController.swift */,
 				B7950E612B126B5E0028811F /* DetalleProductoViewController.swift */,
 				5C7D2F502B16DF9D00ED03B0 /* PedidoViewController.swift */,
+				D5104E522B184B970038C66E /* SucessViewController.swift */,
 			);
 			path = HuacaBrava;
 			sourceTree = "<group>";
@@ -444,6 +447,7 @@
 				B7E935782AED5B61003579B9 /* HuacaBravaDataModel.xcdatamodeld in Sources */,
 				B7350C8E2AB773E100C33F7D /* AppDelegate.swift in Sources */,
 				B76772632AC881BF0024A694 /* CartaTableViewCell.swift in Sources */,
+				D5104E532B184B970038C66E /* SucessViewController.swift in Sources */,
 				B76F6FE22AE03E320036D73C /* CartaAlt.swift in Sources */,
 				B7FD320A2AC866A700104E81 /* AdminBebidaTableViewCell.swift in Sources */,
 				B7E935822AED7755003579B9 /* CarritoTableViewCell.swift in Sources */,
@@ -595,6 +599,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				EXCLUDED_ARCHS = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = HuacaBrava/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -602,6 +607,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -629,6 +635,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

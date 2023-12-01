@@ -8,71 +8,110 @@
 import UIKit
 import Firebase
 
-struct CartaFirebase {
-    let titulo: String
-    let descripcion_col01: String
-    let precio_col01: String
-    let descripcion_col02: String
-    let precio_col02: String
-    let descripcion_col03: String
-    let precio_col03: String
-    let descripcion_col04: String
-    let precio_col04: String
-    let descripcion_col05: String
-    let precio_col05: String
+struct PlatoFirebase {
+    var nombre: String
+    var precio: String
+}
+
+struct CategoriasFirebase {
+    var categoria: String // bebidas -- entradas
+    var plato: [PlatoFirebase]
 }
 
 class CartaAltViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     @IBOutlet weak var cartaAltTableView: UITableView!
     
-    var cartas: [CartaAlt] = []
+    var cartas: [CategoriasFirebase] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        cartas = [
-            CartaAlt(titulo: "Carta 1", descripcion: "Esta es la carta 1"),
-            CartaAlt(titulo: "Carta 2", descripcion: "Esta es la carta 2")
-        ]
+        listCarta()
         
         cartaAltTableView.dataSource = self
         cartaAltTableView.delegate = self
     }
-    // DATA SOURCE
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
         return cartas.count
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        let carta = cartas[section]
+        return carta.categoria
+    }
+
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return  cartas[section].plato.count
     }
         
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "itemCarta", for: indexPath) as! CartaAltTableViewCell
-        let card = cartas[indexPath.row]
-        cell.tituloLabel?.text = card.titulo
+        
+        let plato = cartas[indexPath.section].plato[indexPath.row]
+        
+        cell.tituloLabel?.text = plato.nombre
+        cell.precioLabel?.text = plato.precio
         return cell
     }
-    // DELEGATE
-    var isDetailViewControllerPresented = false
+        
+   
+}
+
+extension CartaAltViewController {
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        /*guard !isDetailViewControllerPresented else {
-            return
-        }
-        
-        isDetailViewControllerPresented = true
-        
-        let selectedCard = cartas[indexPath.row]
-        performSegue(withIdentifier: "showDetail", sender: selectedCard)*/
-        let selectedCard = cartas[indexPath.row]
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        if let cartaDetalleViewController = storyboard.instantiateViewController(withIdentifier: "CartaDetalleViewController") as? CartaDetalleViewController {
-            cartaDetalleViewController.carta = selectedCard
-            self.present(cartaDetalleViewController, animated: true, completion: nil)
-        }
+    func listCarta() {
+        let db = Firestore.firestore()
+        db.collection("cartas").getDocuments(completion: { (query, error) in
+            if let e = error {
+                print(e)
+            } else {
+                if let q = query {
+                    for document in q.documents {
+                        let data = document.data()
+                        
+                        let bedidas = data["bebidas"] as? [[String: Any]] ?? []
+                        var platosFirebase: [PlatoFirebase] = []
+                        for map in bedidas {
+                            let precio = map["precio"] as? String
+                            let nombre = map["nombre"] as? String
+                            let plato = PlatoFirebase(nombre: nombre ?? "", precio: precio ?? "")
+                            platosFirebase.append(plato)
+                        }
+                        let categoriaBedidas = CategoriasFirebase(categoria: "Bebidas", plato: platosFirebase)
+                        self.cartas.append(categoriaBedidas)
+                        
+                        let entradas = data["entradas"] as? [[String: Any]] ?? []
+                        let catEntradas = self.mapeo(mapList: entradas, categoria: "Entradas")
+                        self.cartas.append(catEntradas)
+                        
+                        let platos = data["platos"] as? [[String: Any]] ?? []
+                        let catplatos = self.mapeo(mapList: platos, categoria: "Platos")
+                        self.cartas.append(catplatos)
+                        
+                        let adicionales = data["adicionales"] as? [[String: Any]] ?? []
+                        let catadicionales = self.mapeo(mapList: adicionales, categoria: "Adicionales")
+                        self.cartas.append(catadicionales)
+                        
+                        let postres = data["postres"] as? [[String: Any]] ?? []
+                        let catpostres = self.mapeo(mapList: postres, categoria: "Postres")
+                        self.cartas.append(catpostres)
+                    }
+                    self.cartaAltTableView.reloadData()
+                }
+            }
+        })
     }
-        
-    /*override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "showDetail", let selectedCard = sender as? CartaAlt, let cartaDetalleViewController = segue.destination as? CartaDetalleViewController
-        {
-            cartaDetalleViewController.carta = selectedCard
+    
+    func mapeo(mapList: [[String: Any]], categoria: String) -> CategoriasFirebase {
+        var platosFirebase: [PlatoFirebase] = []
+        for map in mapList {
+            let precio = map["precio"] as? String
+            let nombre = map["nombre"] as? String
+            let plato = PlatoFirebase(nombre: nombre ?? "", precio: precio ?? "")
+            platosFirebase.append(plato)
         }
-    }*/
+        return CategoriasFirebase(categoria: categoria, plato: platosFirebase)
+    }
+    
 }
